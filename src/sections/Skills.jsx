@@ -1,12 +1,17 @@
 function Skills() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Tailwind",
-    "Git",
-    "GitHub"
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React.js",
+  "Tailwind CSS",
+  "Git",
+  "GitHub",
+  "Responsive Design",
+  "UI/UX",
+  "Graphic Design",
+  "QA Testing",
+  "Customer Service",
   ]
 
   return (
