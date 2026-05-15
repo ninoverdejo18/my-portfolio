@@ -1,37 +1,45 @@
 function Hero() {
-  const handleViewProjects = () => {
-    alert("Projects section coming soon!");
-  };
-
   return (
-    <section className="min-h-screen bg-transparent text-white flex items-center">
+    <section className="min-h-screen bg-black text-white flex items-center">
+
       <div className="max-w-6xl mx-auto px-6">
-        <div className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
-          
-          <p className="text-cyan-400 mb-4 text-sm uppercase tracking-[0.3em]">
-            Front-End Developer | QA Tester
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Hi, I'm Nino
-          </h1>
 
-          {/* FIXED: removed div inside p */}
-            <p className="text-slate-300 max-w-2xl text-lg leading-8">
-              I build modern, responsive, and user-friendly websites using React.js and Tailwind CSS.
-            </p>
+        <p className="text-cyan-400 text-lg mb-4">
+          Front-End Developer & QA Tester
+        </p>
 
-          {/* FIXED: added onClick */}
-          <button
-            onClick={handleViewProjects}
-            className="mt-8 inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-8 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-400"
+        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+          Building Modern <br />
+          Web Experiences
+        </h1>
+
+        <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
+          I create responsive and user-friendly websites using React.js,
+          Tailwind CSS, and modern front-end technologies.
+        </p>
+
+        <div className="flex gap-4 mt-8 flex-wrap">
+
+          <a
+            href="#projects"
+            className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl transition"
           >
             View Projects
-          </button>
+          </a>
+
+          <a
+            href="#contact"
+            className="border border-cyan-500 px-6 py-3 rounded-xl hover:bg-cyan-500/10 transition"
+          >
+            Contact Me
+          </a>
 
         </div>
+
       </div>
+
     </section>
-  );
+  )
 }
 
-export default Hero;
+export default Hero
