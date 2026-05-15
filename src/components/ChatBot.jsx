@@ -56,7 +56,9 @@ function ChatBot() {
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-5 right-5 bg-cyan-500 text-black px-5 py-3 rounded-full shadow-lg hover:bg-cyan-400 transition"
       >
-        AI Chat
+        <div className="bg-transparent p-6 rounded-xl transition duration-300 hover:scale-105"> 
+          AI Chat
+        </div>
       </button>
 
       {/* Chat Box */}

@@ -11,17 +11,14 @@ function Hero() {
           <p className="text-cyan-400 mb-4 text-sm uppercase tracking-[0.3em]">
             Front-End Developer | QA Tester
           </p>
-
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             Hi, I'm Nino
           </h1>
 
           {/* FIXED: removed div inside p */}
-          <div className="bg-gray-900 p-6 rounded-xl transition duration-300 hover:scale-105">
             <p className="text-slate-300 max-w-2xl text-lg leading-8">
               I build modern, responsive, and user-friendly websites using React.js and Tailwind CSS.
             </p>
-          </div>
 
           {/* FIXED: added onClick */}
           <button
