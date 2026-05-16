@@ -1,17 +1,20 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
+
   const [messages, setMessages] = useState([
     {
-      text: "Hi! I'm Nino's AI assistant 👋",
+      text: "Hi! I'm Odette's AI assistant 👋 Ask me anything.",
       sender: "bot",
     },
   ]);
 
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (input.trim() === "") return;
 
     const userMessage = {
@@ -21,22 +24,40 @@ function ChatBot() {
 
     setMessages((prev) => [...prev, userMessage]);
 
-    let botReply = "I am still learning.";
+    const userInput = input;
 
-    if (input.toLowerCase().includes("hello")) {
-      botReply = "Hello! Welcome to Nino's portfolio.";
-    }
+    setInput("");
+    setLoading(true);
 
-    if (input.toLowerCase().includes("skills")) {
-      botReply =
-        "Nino specializes in React.js, Tailwind CSS, QA Testing, Graphic Design, and Customer Service.";
-    }
+    try {
+      const response = await axios.post(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          model: "gpt-4o-mini",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are Odette's professional AI portfolio assistant. Answer questions professionally and helpfully.",
+            },
+            {
+              role: "user",
+              content: userInput,
+            },
+          ],
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${
+              import.meta.env.VITE_OPENAI_API_KEY
+            }`,
+          },
+        }
+      );
 
-    if (input.toLowerCase().includes("projects")) {
-      botReply = "Check out the projects section below.";
-    }
+      const botReply = response.data.choices[0].message.content;
 
-    setTimeout(() => {
       setMessages((prev) => [
         ...prev,
         {
@@ -44,9 +65,19 @@ function ChatBot() {
           sender: "bot",
         },
       ]);
-    }, 500);
+    } catch (error) {
+      console.error(error);
 
-    setInput("");
+      setMessages((prev) => [
+        ...prev,
+        {
+          text: "Sorry, something went wrong.",
+          sender: "bot",
+        },
+      ]);
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -54,16 +85,14 @@ function ChatBot() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-5 right-5 bg-cyan-500 text-black px-5 py-3 rounded-full shadow-lg hover:bg-cyan-400 transition"
+        className="fixed bottom-5 right-5 bg-cyan-500 text-black px-5 py-3 rounded-full shadow-lg hover:bg-cyan-400 transition z-50"
       >
-        <div className="bg-transparent p-6 rounded-xl transition duration-300 hover:scale-105"> 
-          AI Chat
-        </div>
+        Odette
       </button>
 
       {/* Chat Box */}
       {isOpen && (
-        <div className="fixed bottom-24 right-5 w-80 bg-slate-900 border border-cyan-500 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="fixed bottom-24 right-5 w-80 bg-slate-900 border border-cyan-500 rounded-2xl shadow-2xl overflow-hidden z-50">
 
           {/* Header */}
           <div className="bg-cyan-500 text-black p-4 font-bold">
@@ -84,6 +113,12 @@ function ChatBot() {
                 {msg.text}
               </div>
             ))}
+
+            {loading && (
+              <div className="bg-slate-700 text-white p-3 rounded-xl w-fit">
+                Typing...
+              </div>
+            )}
           </div>
 
           {/* Input Area */}
@@ -93,6 +128,9 @@ function ChatBot() {
               placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) =>
+                e.key === "Enter" && handleSend()
+              }
               className="flex-1 bg-slate-800 text-white px-4 py-3 outline-none"
             />
 
