@@ -1,4 +1,5 @@
-import { ThemeProvider, useTheme } from "./context/ThemeContext.jsx";
+import { useState, useEffect } from "react";
+
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./sections/Hero.jsx";
 import About from "./sections/About.jsx";
@@ -8,24 +9,46 @@ import Contact from "./sections/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import ChatBot from "./components/ChatBot.jsx";
 
-function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme();
-
-  return (
-    <div className="fixed top-4 right-4 z-[9999] flex gap-2">
-      <button onClick={() => setTheme("dark")} className="px-3 py-1 bg-black text-white rounded border-gray-700 hover:opacity-80">Dark</button>
-      <button onClick={() => setTheme("light")} className="px-3 py-1 bg-gray-200 text-black rounded hover:opacity-80">Light</button>
-      <button onClick={() => setTheme("ocean")} className="px-3 py-1 bg-blue-600 text-white rounded hover:opacity-80">Ocean</button>
-    </div>
-  );
-}
-
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  // Apply theme to document
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const themes = {
+    dark: "bg-slate-950 text-white",
+    light: "bg-white text-black",
+    ocean: "bg-blue-950 text-white",
+  };
+
   return (
-    <ThemeProvider>
-      <ThemeSwitcher />
+    <div className={`relative min-h-screen overflow-hidden transition-all duration-300 ${themes[theme]}`}>
+      {/* Background Effects */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-24 top-16 h-72 w-72 rounded-full bg-slate-500/10 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-slate-700/15 blur-3xl" />
+        <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-black/40 to-transparent" />
+      </div>
+
+      {/* Theme Switcher */}
+      <div className="fixed top-4 right-4 z-50 flex gap-2">
+        <button onClick={() => setTheme("dark")} className="px-3 py-1 bg-slate-800 rounded">
+          Dark
+        </button>
+        <button onClick={() => setTheme("light")} className="px-3 py-1 bg-gray-200 text-black rounded">
+          Light
+        </button>
+        <button onClick={() => setTheme("ocean")} className="px-3 py-1 bg-blue-600 rounded">
+          Ocean
+        </button>
+      </div>
+
+      {/* Main Content */}
       <Navbar />
-      <main>
+
+      <main className="relative">
         <Hero />
         <About />
         <Skills />
@@ -34,7 +57,7 @@ function App() {
         <Footer />
         <ChatBot />
       </main>
-    </ThemeProvider>
+    </div>
   );
 }
 
