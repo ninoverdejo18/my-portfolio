@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import portfolioImage from "../assets/projects/portfolio.png";
 import ecommerceImage from "../assets/projects/ecommerce.png";
 import dashboardImage from "../assets/projects/dashboard.png";
@@ -15,13 +17,13 @@ function Projects() {
       title: "Ecommerce",
       description: "A productivity app with task tracking features.",
       tech: "React • JavaScript",
-      image: ecommerceImage, // placeholder image (you can replace later)
+      image: ecommerceImage,
     },
     {
       title: "Dashboard UI",
       description: "Modern responsive dashboard design.",
       tech: "HTML • CSS • Tailwind",
-      image: dashboardImage, // placeholder image (you can replace later)
+      image: dashboardImage,
     },
   ];
 
@@ -34,9 +36,14 @@ function Projects() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500 transition duration-300 hover:-translate-y-2"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500"
             >
               {/* Project Image */}
               <img
@@ -58,7 +65,7 @@ function Projects() {
                   {project.tech}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
