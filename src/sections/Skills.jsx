@@ -1,18 +1,20 @@
+import { motion } from "framer-motion";
+
 function Skills() {
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React.js",
-  "Tailwind CSS",
-  "Git",
-  "GitHub",
-  "Responsive Design",
-  "UI/UX",
-  "Graphic Design",
-  "QA Testing",
-  "Customer Service",
-  ]
+  const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "Tailwind CSS",
+    "Git",
+    "GitHub",
+    "Responsive Design",
+    "UI/UX",
+    "Graphic Design",
+    "QA Testing",
+    "Customer Service",
+  ];
 
   return (
     <section id="skills" className="bg-gray-900 text-white py-20">
@@ -24,18 +26,19 @@ const skills = [
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <div
+            <motion.div
               key={index}
+              whileHover={{ scale: 1.05 }}
               className="bg-black p-4 rounded-xl text-center border border-gray-800 hover:border-cyan-500 transition"
             >
               {skill}
-            </div>
+            </motion.div>
           ))}
         </div>
 
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
