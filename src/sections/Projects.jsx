@@ -38,11 +38,15 @@ function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
+              whileHover={{ scale: 1.04 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }}
               className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500"
             >
               {/* Project Image */}
