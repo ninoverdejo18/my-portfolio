@@ -5,7 +5,7 @@ function Hero() {
       <div className="max-w-6xl mx-auto px-6">
 
         <p className="text-cyan-400 text-lg mb-4">
-          Front-End Developer & QA Tester
+          Front-End Developer, QA Tester, and Graphic Designer
         </p>
 
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
@@ -14,8 +14,7 @@ function Hero() {
         </h1>
 
         <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
-          I create responsive and user-friendly websites using React.js,
-          Tailwind CSS, and modern front-end technologies.
+          Front-End Developer and QA Tester with experience in responsive web development, graphic design, customer service, and modern UI/UX design using React.js and Tailwind CSS.
         </p>
 
         <div className="flex gap-4 mt-8 flex-wrap">
@@ -33,7 +32,13 @@ function Hero() {
           >
             Contact Me
           </a>
-
+            <a
+             href="/resume.pdf"
+            target="_blank"
+            className="text-cyan-400 underline"
+            >
+            Download Resume
+           </a>
         </div>
 
       </div>

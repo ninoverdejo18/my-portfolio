@@ -12,14 +12,14 @@ function Projects() {
       image: portfolioImage,
     },
     {
-      title: "Task Management App",
+      title: "Ecommerce",
       description: "A productivity app with task tracking features.",
       tech: "React • JavaScript",
       image: ecommerceImage, // placeholder image (you can replace later)
     },
     {
-      title: "Landing Page UI",
-      description: "Modern responsive landing page design.",
+      title: "Dashboard UI",
+      description: "Modern responsive dashboard design.",
       tech: "HTML • CSS • Tailwind",
       image: dashboardImage, // placeholder image (you can replace later)
     },
