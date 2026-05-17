@@ -112,19 +112,7 @@ function Projects() {
                 </p>
 
                 <div className="flex gap-4">
-                  <a
-                    href={project.demo}
-                    className="bg-cyan-500 hover:bg-cyan-400 text-black px-4 py-2 rounded-lg font-medium transition"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href={project.github}
-                    className="border border-cyan-500 hover:bg-cyan-500 hover:text-black px-4 py-2 rounded-lg font-medium transition"
-                  >
-                    GitHub
-                  </a>
+                
                 </div>
               </div>
             </motion.div>
