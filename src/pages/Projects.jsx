@@ -1,82 +1,137 @@
 import { motion } from "framer-motion";
-import AnimatedSection from "../components/AnimatedSection";
 
 import portfolioImage from "../assets/projects/portfolio.png";
 import ecommerceImage from "../assets/projects/ecommerce.png";
 import dashboardImage from "../assets/projects/dashboard.png";
+import chatappImage from "../assets/projects/chatapp.jpg";
+import taskmanagerImage from "../assets/projects/taskmanager.jpg";
+import weatherappImage from "../assets/projects/weatherapp.jpg";
+import bookingappImage from "../assets/projects/bookingapp.jpg";
 
 function Projects() {
   const projects = [
     {
       title: "Portfolio Website",
       description:
-        "Professional responsive portfolio using React and Tailwind CSS.",
-      tech: "React • Tailwind • Vite",
+        "Modern responsive portfolio website built with React and Tailwind CSS.",
+      tech: "React • Tailwind CSS • Vite",
       image: portfolioImage,
+      demo: "#",
+      github: "#",
     },
     {
-      title: "Ecommerce",
-      description: "A productivity app with task tracking features.",
-      tech: "React • JavaScript",
+      title: "E-Commerce Website",
+      description:
+        "Online shopping platform with product listings, cart system, and checkout UI.",
+      tech: "React • Firebase • Tailwind",
       image: ecommerceImage,
+      demo: "#",
+      github: "#",
     },
     {
-      title: "Dashboard UI",
-      description: "Modern responsive dashboard design.",
-      tech: "HTML • CSS • Tailwind",
+      title: "Admin Dashboard",
+      description:
+        "Interactive admin dashboard with charts, analytics, and responsive layout.",
+      tech: "React • Chart.js • CSS",
       image: dashboardImage,
+      demo: "#",
+      github: "#",
+    },
+    {
+      title: "Chat Application",
+      description:
+        "Real-time messaging application with modern chat interface design.",
+      tech: "React • Socket.io • Node.js",
+      image: chatappImage,
+      demo: "#",
+      github: "#",
+    },
+    {
+      title: "Task Manager App",
+      description:
+        "Productivity application for task organization and project management.",
+      tech: "React • Local Storage • Tailwind",
+      image: taskmanagerImage,
+      demo: "#",
+      github: "#",
+    },
+    {
+      title: "Weather App",
+      description:
+        "Weather forecast application using live API integration and responsive UI.",
+      tech: "React • OpenWeather API • CSS",
+      image: weatherappImage,
+      demo: "#",
+      github: "#",
+    },
+    {
+      title: "Booking System",
+      description:
+        "Appointment and reservation booking interface with calendar integration.",
+      tech: "React • Firebase • Tailwind",
+      image: bookingappImage,
+      demo: "#",
+      github: "#",
     },
   ];
 
   return (
-    <AnimatedSection>
-      <section id="projects" className="bg-black text-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            Projects
-          </h2>
+    <section
+      id="projects"
+      className="bg-black text-white py-20 px-6"
+    >
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-14">
+          Projects
+        </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.04 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, amount: 0.2 }}
-              className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500"
+              whileHover={{ scale: 1.03 }}
+              className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500 transition"
             >
-              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-48 w-full object-cover"
+                className="w-full h-52 object-cover"
               />
 
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-2xl font-semibold mb-3 text-cyan-400">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
-                <p className="text-cyan-400 text-sm">
+                <p className="text-sm text-cyan-300 mb-5">
                   {project.tech}
                 </p>
+
+                <div className="flex gap-4">
+                  <a
+                    href={project.demo}
+                    className="bg-cyan-500 hover:bg-cyan-400 text-black px-4 py-2 rounded-lg font-medium transition"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href={project.github}
+                    className="border border-cyan-500 hover:bg-cyan-500 hover:text-black px-4 py-2 rounded-lg font-medium transition"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
-          </div>
         </div>
-      </section>
-    </AnimatedSection>
+      </div>
+    </section>
   );
 }
 
