@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AnimatedSection from "../components/AnimatedSection";
 
 function Hero() {
@@ -22,23 +23,24 @@ function Hero() {
 
           <div className="flex gap-4 mt-8 flex-wrap">
 
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl transition"
             >
               View Projects
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="border border-cyan-500 px-6 py-3 rounded-xl hover:bg-cyan-500/10 transition"
             >
               Contact Me
-            </a>
+            </Link>
 
             <a
               href="/resume.pdf"
               target="_blank"
+              rel="noreferrer"
               className="text-cyan-400 underline"
             >
               Download Resume

@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+import AnimatedSection from "../components/AnimatedSection"
 import emailjs from "@emailjs/browser"
 
 function Contact() {
@@ -28,9 +29,10 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-black text-black dark:text-white">
+    <AnimatedSection>
+      <section id="contact" className="py-20 bg-white dark:bg-black text-black dark:text-white">
 
-      <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center">
 
         <h2 className="text-4xl font-bold mb-6">
           Contact Me
@@ -83,6 +85,7 @@ function Contact() {
 
       </div>
     </section>
+  </AnimatedSection>
   )
 }
 

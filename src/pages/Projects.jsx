@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import AnimatedSection from "../components/AnimatedSection";
 
 import portfolioImage from "../assets/projects/portfolio.png";
 import ecommerceImage from "../assets/projects/ecommerce.png";
@@ -28,13 +29,14 @@ function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-black text-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Projects
-        </h2>
+    <AnimatedSection>
+      <section id="projects" className="bg-black text-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-12 text-center">
+            Projects
+          </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -71,9 +73,10 @@ function Projects() {
               </div>
             </motion.div>
           ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </AnimatedSection>
   );
 }
 
