@@ -2,6 +2,8 @@ import { useRef, useState } from "react"
 import AnimatedSection from "../components/AnimatedSection"
 import emailjs from "@emailjs/browser"
 
+emailjs.init("Um40NagmPxC9YUZAO")
+
 function Contact() {
   const form = useRef()
 
@@ -9,36 +11,33 @@ function Contact() {
   const [success, setSuccess] = useState("")
   const [error, setError] = useState("")
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault()
 
     setLoading(true)
     setSuccess("")
     setError("")
 
-    emailjs.sendForm(
-      "service_js1an7v",
-      "template_sym6wks",
-      form.current,
-      "Um40NagmPxC9YUZAO"
-    )
-    .then(() => {
+    try {
+      await emailjs.sendForm(
+        "service_js1an7v",
+        "template_sym6wks",
+        form.current,
+        "Um40NagmPxC9YUZAO"
+      )
 
       alert("Successfully sent message.")
-
       setSuccess("Successfully sent message.")
-      setLoading(false)
-
       form.current.reset()
-    })
-    .catch((err) => {
-      console.log(err)
+    } catch (err) {
+      console.error("EmailJS send error:", err)
+      const message = err?.text || err?.message || "Failed to send message. Please try again."
 
-      alert("Failed to send message. Please try again.")
-
-      setError("Failed to send message. Please try again.")
+      alert(message)
+      setError(message)
+    } finally {
       setLoading(false)
-    })
+    }
   }
 
   return (
