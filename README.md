@@ -35,24 +35,140 @@ I'm a passionate web developer with a strong focus on creating modern, responsiv
 ## 💼 Skills
 
 ### Frontend Development
-- **HTML** - Semantic markup, accessibility best practices, SEO optimization
-- **CSS** - Advanced styling, animations, flexbox, CSS Grid, preprocessors
-- **JavaScript** - ES6+, DOM manipulation, async programming, API integration
-- **React.js** - Component architecture, hooks, state management, performance optimization
-- **Tailwind CSS** - Utility-first styling, responsive design, custom configurations
+
+- **HTML**
+  - Semantic and accessible HTML5 markup
+  - Proper use of heading hierarchy and page structure
+  - Meta tags for SEO optimization
+  - ARIA labels and roles for accessibility
+  - Form validation and accessibility standards
+  - Cross-browser compatibility
+
+- **CSS**
+  - Advanced styling techniques and best practices
+  - CSS animations and transitions
+  - Flexbox layout system
+  - CSS Grid for complex layouts
+  - CSS preprocessors (SCSS/SASS)
+  - Responsive design with media queries
+  - CSS variables and custom properties
+  - BEM and other CSS naming conventions
+
+- **JavaScript**
+  - ES6+ features (arrow functions, destructuring, spread operator)
+  - DOM manipulation and event handling
+  - Asynchronous programming (Promises, async/await)
+  - REST API integration and data fetching
+  - Error handling and debugging
+  - Closures, prototypes, and OOP concepts
+  - Array and object methods
+  - Regular expressions and string manipulation
+
+- **React.js**
+  - Functional components and React Hooks
+  - State management (useState, useContext)
+  - Effect hooks for side effects
+  - Custom hooks creation
+  - Component composition and reusability
+  - Props drilling and prop management
+  - Performance optimization techniques
+  - JSX syntax and rendering
+  - Conditional rendering and lists
+  - Form handling and validation
+
+- **Tailwind CSS**
+  - Utility-first CSS framework expertise
+  - Responsive design with Tailwind breakpoints
+  - Custom configuration and theme customization
+  - Tailwind plugins and extensions
+  - Mobile-first design approach
+  - Component-based styling
+  - Optimization and purging unused styles
+  - Dark mode implementation
 
 ### Tools & Platforms
-- **Git** - Version control, branching strategies, commit best practices
-- **GitHub** - Repository management, collaboration, pull requests, GitHub Actions
+
+- **Git**
+  - Version control fundamentals
+  - Creating and managing branches
+  - Merging and rebasing strategies
+  - Commit best practices and meaningful messages
+  - Stashing and cherry-picking
+  - Resolving merge conflicts
+  - Undoing changes (revert, reset)
+  - Git workflows (Git Flow, GitHub Flow)
+
+- **GitHub**
+  - Repository creation and management
+  - Collaborative development workflows
+  - Pull requests and code reviews
+  - Issue tracking and project management
+  - GitHub Actions for CI/CD
+  - Repository documentation
+  - Branch protection rules
+  - Collaboration with teams
 
 ### Design & UX
-- **Responsive Design** - Mobile-first approach, cross-browser compatibility, flexible layouts
-- **UI/UX** - User experience design, wireframing, visual hierarchy, accessibility (WCAG)
-- **Graphic Design** - Visual design, branding, creating engaging user interfaces
+
+- **Responsive Design**
+  - Mobile-first design approach
+  - Fluid layouts and flexible grids
+  - Media queries and breakpoints
+  - Touch-friendly interfaces
+  - Cross-browser and cross-device testing
+  - Viewport configuration
+  - Responsive typography
+  - CSS Grid and Flexbox for responsive layouts
+  - Ensuring accessibility across devices
+
+- **UI/UX**
+  - User experience design principles
+  - Wireframing and prototyping
+  - Visual hierarchy and design systems
+  - Accessibility (WCAG 2.1 standards)
+  - User research and personas
+  - Usability testing
+  - Color theory and typography
+  - Interaction design and microinteractions
+  - Information architecture
+  - User journey mapping
+
+- **Graphic Design**
+  - Visual design and branding
+  - Logo and icon design
+  - Color palettes and design systems
+  - Typography and font selection
+  - Image optimization and editing
+  - Creating engaging user interfaces
+  - Design consistency across platforms
+  - Visual storytelling and composition
+  - Creating mockups and prototypes
 
 ### Quality Assurance
-- **QA Testing** - Manual testing, test case creation, bug identification and reporting
-- **Customer Service** - User support, communication, problem resolution, feedback management
+
+- **QA Testing**
+  - Manual testing and test execution
+  - Test case creation and documentation
+  - Bug identification and detailed reporting
+  - Regression testing
+  - Functional and non-functional testing
+  - User acceptance testing (UAT)
+  - Browser compatibility testing
+  - Performance and load testing
+  - Security testing basics
+  - Test coverage analysis
+
+- **Customer Service**
+  - Responsive and empathetic customer support
+  - Clear and effective communication
+  - Issue resolution and troubleshooting
+  - Customer feedback collection and analysis
+  - Problem-solving under pressure
+  - Building positive customer relationships
+  - Managing expectations and timelines
+  - Documentation and knowledge base creation
+  - Multilingual support capabilities
+  - Customer satisfaction focus
 
 ## 🛠 Technologies Used
 
