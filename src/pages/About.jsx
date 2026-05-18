@@ -29,7 +29,7 @@ function About() {
             </h2>
 
             <p className="text-slate-300 leading-relaxed">
-              I am an aspiring Front-End Developer and QA Tester with a passion
+              I am Front-End Developer and QA Tester with a passion
               for creating modern, responsive, and user-friendly web applications.
               My journey into web development started from my interest in design,
               technology, and problem-solving, which inspired me to continuously
