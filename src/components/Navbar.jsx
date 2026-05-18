@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   return (
     <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md text-white z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Nino</h1>
+
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src={logo}
+            alt="Nino Logo"
+            className="h-10 w-auto object-contain"
+          />
+        </Link>
 
         <ul className="hidden md:flex gap-8">
           <li>
@@ -38,4 +47,4 @@ function Navbar() {
   );
 }
 
-export default Navbar
+export default Navbar;
