@@ -60,7 +60,7 @@ function Hero() {
 
             <div>
               <h3 className="text-3xl font-bold text-cyan-400">
-                10+
+                5
               </h3>
               <p className="text-gray-400">
                 Web Projects
@@ -69,7 +69,7 @@ function Hero() {
 
             <div>
               <h3 className="text-3xl font-bold text-cyan-400">
-                3+
+                2+
               </h3>
               <p className="text-gray-400">
                 Years Experience
