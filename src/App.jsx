@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import ChatBot from "./components/ChatBot.jsx";
