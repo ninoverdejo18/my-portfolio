@@ -58,24 +58,46 @@ function About() {
               high-quality, and innovative web solutions.
             </p>
 
-            {/* Small Info Cards */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
+{/* Goals & Vision */}
+<div className="mt-8 grid md:grid-cols-2 gap-4">
 
-              <div className="bg-slate-900/70 border border-white/10 rounded-2xl p-4">
-                <h3 className="text-2xl font-bold text-cyan-400"></h3>
-                <p className="text-slate-400 text-sm mt-1">
-                  Years Learning Development
-                </p>
-              </div>
+  {/* Goals */}
+  <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/70 p-6 hover:border-cyan-400/40 transition duration-300">
 
-              <div className="bg-slate-900/70 border border-white/10 rounded-2xl p-4">
-                <h3 className="text-2xl font-bold text-cyan-400"></h3>
-                <p className="text-slate-400 text-sm mt-1">
-                  Projects Built
-                </p>
-              </div>
+    <h3 className="text-xl font-semibold text-cyan-400 mb-3 text-center">
+      My Goals
+    </h3>
 
-            </div>
+    <p className="text-slate-300 leading-relaxed text-sm text-left">
+      My goal is to continuously grow as a Front-End Developer
+      by building real-world projects, improving my technical
+      expertise, and creating modern applications that provide
+      meaningful user experiences. I aim to contribute to
+      innovative teams where I can apply my creativity,
+      problem-solving skills, and passion for technology.
+    </p>
+
+  </div>
+
+  {/* Vision */}
+  <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/70 p-6 hover:border-cyan-400/40 transition duration-300">
+
+    <h3 className="text-xl font-semibold text-cyan-400 mb-3 text-center">
+      My Vision
+    </h3>
+
+    <p className="text-slate-300 leading-relaxed text-sm text-left">
+      I envision becoming a highly skilled software developer
+      capable of building scalable, impactful, and visually
+      engaging digital products. I strive to combine clean
+      code, modern UI/UX principles, and innovative thinking
+      to create solutions that positively improve user
+      interaction and business growth.
+    </p>
+
+  </div>
+
+</div>
 
           </div>
 
