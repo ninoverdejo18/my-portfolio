@@ -38,15 +38,6 @@ function Projects() {
       github: "#",
     },
     {
-      title: "Chat Application",
-      description:
-        "Real-time messaging application with modern chat interface design.",
-      tech: "React • Socket.io • Node.js",
-      image: chatappImage,
-      demo: "#",
-      github: "#",
-    },
-    {
       title: "Task Manager App",
       description:
         "Productivity application for task organization and project management.",
@@ -61,15 +52,6 @@ function Projects() {
         "Weather forecast application using live API integration and responsive UI.",
       tech: "React • OpenWeather API • CSS",
       image: weatherappImage,
-      demo: "#",
-      github: "#",
-    },
-    {
-      title: "Booking System",
-      description:
-        "Appointment and reservation booking interface with calendar integration.",
-      tech: "React • Firebase • Tailwind",
-      image: bookingappImage,
       demo: "#",
       github: "#",
     },
