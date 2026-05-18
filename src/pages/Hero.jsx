@@ -60,7 +60,7 @@ function Hero() {
 
             <div>
               <h3 className="text-3xl font-bold text-cyan-400">
-                7
+                5
               </h3>
               <p className="text-gray-400">
                 Web Projects

@@ -45,7 +45,7 @@ function About() {
 
             <p className="text-slate-300 leading-relaxed mt-4">
               With a background in graphic design and customer service,
-              I developed strong communication, creativity, and attention to
+              I developed good communication, creativity, and attention to
               detail — qualities that help me create better user experiences
               and collaborate effectively with teams and clients.
             </p>
