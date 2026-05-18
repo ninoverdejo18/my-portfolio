@@ -105,7 +105,7 @@ function Hero() {
             </Link>
 
             <a
-              href="/Nino Verdejo.pdf"
+              href="/NinoVerdejo.pdf"
               target="_blank"
               rel="noreferrer"
               className="border border-gray-700 px-6 py-3 rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition duration-300"
