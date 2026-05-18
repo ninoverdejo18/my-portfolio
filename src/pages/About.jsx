@@ -13,24 +13,70 @@ function About() {
             <img
               src={profile}
               alt="Profile"
-              className="w-64 h-64 object-cover rounded-[1.75rem] border border-slate-700 shadow-2xl shadow-slate-950/30"
+              className="w-72 h-72 object-cover rounded-[2rem] border border-slate-700 shadow-2xl shadow-slate-950/30 hover:scale-105 transition duration-500"
             />
           </div>
 
           {/* Text */}
           <div className="rounded-[2rem] border border-white/10 bg-slate-950/65 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
-            <h2 className="text-4xl font-bold mb-4">About Me</h2>
+
+            <p className="text-cyan-400 uppercase tracking-[0.2em] text-sm mb-3">
+              Get To Know Me
+            </p>
+
+            <h2 className="text-4xl font-bold mb-6 leading-tight">
+              About Me
+            </h2>
 
             <p className="text-slate-300 leading-relaxed">
-              I am a Front-End Developer specializing in building clean, modern, and responsive web applications using React and Tailwind CSS.
-              I focus on creating user-friendly interfaces, responsive layouts, and visually appealing designs that enhance the overall user experience.
-              With a background in graphic design and customer service, I bring both creative and interpersonal skills to every project.
-              Passionate about modern web development, I continuously improve my skills in UI/UX design, component-based architecture, and performance optimization to deliver professional, engaging, and high-quality digital solutions.
+              I am an aspiring Front-End Developer and QA Tester with a passion
+              for creating modern, responsive, and user-friendly web applications.
+              My journey into web development started from my interest in design,
+              technology, and problem-solving, which inspired me to continuously
+              learn and improve my skills in modern web technologies.
             </p>
 
-            <p className="text-slate-300 mt-4">
-              I enjoy turning ideas into real-world web applications with great UI/UX design.
+            <p className="text-slate-300 leading-relaxed mt-4">
+              I specialize in building clean interfaces using React.js,
+              JavaScript, Tailwind CSS, HTML, and CSS. I enjoy transforming ideas
+              into real-world digital experiences that are visually appealing,
+              functional, and optimized for performance across different devices.
             </p>
+
+            <p className="text-slate-300 leading-relaxed mt-4">
+              With a background in graphic design and customer service,
+              I developed strong communication, creativity, and attention to
+              detail — qualities that help me create better user experiences
+              and collaborate effectively with teams and clients.
+            </p>
+
+            <p className="text-slate-300 leading-relaxed mt-4">
+              As an IT graduate, I continue exploring new technologies,
+              improving my development workflow, and building projects that
+              challenge my creativity and technical abilities. My goal is to
+              become a professional software developer who delivers impactful,
+              high-quality, and innovative web solutions.
+            </p>
+
+            {/* Small Info Cards */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+
+              <div className="bg-slate-900/70 border border-white/10 rounded-2xl p-4">
+                <h3 className="text-2xl font-bold text-cyan-400"></h3>
+                <p className="text-slate-400 text-sm mt-1">
+                  Years Learning Development
+                </p>
+              </div>
+
+              <div className="bg-slate-900/70 border border-white/10 rounded-2xl p-4">
+                <h3 className="text-2xl font-bold text-cyan-400"></h3>
+                <p className="text-slate-400 text-sm mt-1">
+                  Projects Built
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
