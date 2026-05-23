@@ -30,8 +30,16 @@ function App() {
     // Disable shortcuts
     const handleKeyDown = (e) => {
 
-      // Ctrl/Cmd shortcuts
+      // Allow copy inside email links
+      const activeElement = document.activeElement;
+
+      const isEmail =
+        activeElement?.innerText?.includes(
+          "ninoverdejo@gmail.com"
+        );
+
       if (
+        !isEmail &&
         (e.ctrlKey || e.metaKey) &&
         ["c", "x", "u", "s", "a"].includes(
           e.key.toLowerCase()
@@ -46,8 +54,19 @@ function App() {
       }
     };
 
-    // Disable text selection
+    // Disable text selection except email
     const handleSelectStart = (e) => {
+
+      const allowSelection =
+        e.target.closest("a") ||
+        e.target.innerText?.includes(
+          "ninoverdejo@gmail.com"
+        );
+
+      if (allowSelection) {
+        return;
+      }
+
       e.preventDefault();
     };
 
