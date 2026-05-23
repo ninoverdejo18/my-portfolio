@@ -205,21 +205,6 @@ function Contact() {
 
                 </div>
 
-                {/* Subject */}
-                <div>
-                  <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
-                    Subject
-                  </label>
-
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Project Inquiry"
-                    className="w-full rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-5 py-4 text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20"
-                    required
-                  />
-                </div>
-
                 {/* Message */}
                 <div>
                   <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
