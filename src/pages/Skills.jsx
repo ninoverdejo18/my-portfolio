@@ -80,10 +80,11 @@ function Skills() {
         <div className="max-w-6xl mx-auto px-6 relative z-10">
 
           {/* Heading */}
-          <h2 className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
-            Skills
-          </h2>
-
+            <h2 className="text-4xl font-bold mb-6 leading-tight text-center">
+              <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
+                Skills
+              </span>
+            </h2>
           <p className="text-slate-400 text-center max-w-2xl mx-auto mb-12">
             Technologies, tools, and professional skills that I use
             to create modern, responsive, and user-focused web applications.

@@ -58,9 +58,11 @@ function Contact() {
         <div className="max-w-4xl mx-auto px-6 text-center">
 
           {/* Heading */}
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
-            Contact Me
-          </h2>
+            <h2 className="text-4xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
+                Contact Me
+              </span>
+            </h2>
 
           <p className="text-slate-400 mb-10">
             Send me a message and I’ll get back to you.

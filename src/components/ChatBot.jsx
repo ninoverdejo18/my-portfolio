@@ -7,7 +7,7 @@ function ChatBot() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "Hi! I'm your AI assistant 👋 Ask me anything.",
+      text: "Hi! This is Odette, your AI assistant 👋 Ask me anything.",
       sender: "bot",
     },
   ]);
@@ -90,7 +90,7 @@ function ChatBot() {
         bg-gradient-to-r from-[#CDFF45] to-[#A3E635]
         hover:scale-105 hover:shadow-lg hover:shadow-[#CDFF45]/20"
       >
-        AI Assistant
+        Odette
       </button>
 
       {/* Chat Box */}

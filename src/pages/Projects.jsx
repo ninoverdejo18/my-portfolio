@@ -91,9 +91,12 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
-              Projects
+          > 
+<h2 className="text-4xl font-bold mb-6 leading-tight text-center">
+
+              <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
+                Projects
+              </span>
             </h2>
 
             <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14">
