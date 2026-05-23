@@ -65,32 +65,32 @@ function Skills() {
     <AnimatedSection>
       <section
         id="skills"
-        className="relative overflow-hidden bg-black py-24 text-white"
+        className="relative overflow-hidden bg-black py-16 text-white sm:py-20 lg:py-24"
       >
 
         {/* Background Glow */}
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
 
         {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Section Header */}
-          <div className="mx-auto mb-16 max-w-3xl text-center">
+          <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
 
-            <span className="mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-5 py-2 text-sm tracking-widest text-[#CDFF45]">
+            <span className="mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45] sm:px-5 sm:text-sm">
               MY EXPERTISE
             </span>
 
-            <h2 className="mb-6 text-5xl font-black leading-tight">
+            <h2 className="mb-5 text-3xl font-black leading-tight sm:text-5xl lg:mb-6">
               Technologies &
               <span className="block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
                 Professional Skills
               </span>
             </h2>
 
-            <p className="text-lg leading-relaxed text-white/60">
+            <p className="text-base leading-relaxed text-white/60 sm:text-lg">
               A collection of technologies, tools, and creative skills
               I use to build modern, responsive, and engaging digital experiences.
             </p>
@@ -98,40 +98,40 @@ function Skills() {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
 
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="group relative overflow-hidden rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-7 shadow-[0_0_40px_rgba(205,255,69,0.04)] transition duration-300 hover:border-[#CDFF45]/40"
+                className="group relative overflow-hidden rounded-[1.8rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-5 shadow-[0_0_40px_rgba(205,255,69,0.04)] transition duration-300 hover:border-[#CDFF45]/40 sm:rounded-[2rem] sm:p-6 lg:p-7"
               >
 
                 {/* Hover Glow */}
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#CDFF45]/10 blur-3xl opacity-0 transition duration-500 group-hover:opacity-100" />
+                <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-[#CDFF45]/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100 sm:h-32 sm:w-32" />
 
                 {/* Card Content */}
                 <div className="relative z-10">
 
                   {/* Accent Number */}
-                  <div className="mb-5 flex items-center justify-between">
+                  <div className="mb-4 flex items-center justify-between sm:mb-5">
 
-                    <div className="h-1 w-14 rounded-full bg-[#CDFF45] transition-all duration-300 group-hover:w-24" />
+                    <div className="h-1 w-12 rounded-full bg-[#CDFF45] transition-all duration-300 group-hover:w-24 sm:w-14" />
 
-                    <span className="text-sm font-medium text-white/20">
+                    <span className="text-xs font-medium text-white/20 sm:text-sm">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
                   </div>
 
                   {/* Skill Title */}
-                  <h3 className="mb-4 text-2xl font-bold text-white transition duration-300 group-hover:text-[#CDFF45]">
+                  <h3 className="mb-3 text-xl font-bold text-white transition duration-300 group-hover:text-[#CDFF45] sm:mb-4 sm:text-2xl">
                     {skill.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm leading-relaxed text-white/60">
+                  <p className="text-sm leading-relaxed text-white/60 sm:text-[15px]">
                     {skill.description}
                   </p>
 

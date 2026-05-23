@@ -45,15 +45,15 @@ function Contact() {
     <AnimatedSection>
       <section
         id="contact"
-        className="relative overflow-hidden bg-black py-28 text-white"
+        className="relative overflow-hidden bg-black py-16 text-white sm:py-20 lg:py-28"
       >
 
         {/* Background Effects */}
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
 
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Header */}
           <motion.div
@@ -61,21 +61,21 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mx-auto mb-20 max-w-3xl text-center"
+            className="mx-auto mb-14 max-w-3xl text-center sm:mb-16 lg:mb-20"
           >
 
-            <span className="mb-5 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-5 py-2 text-sm tracking-[0.2em] text-[#CDFF45]">
+            <span className="mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45] sm:mb-5 sm:px-5 sm:text-sm">
               CONTACT
             </span>
 
-            <h2 className="mb-6 text-5xl font-black leading-tight md:text-6xl">
+            <h2 className="mb-5 text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
               Let’s work on your
               <span className="block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
                 next digital project
               </span>
             </h2>
 
-            <p className="text-lg leading-relaxed text-white/60">
+            <p className="text-base leading-relaxed text-white/60 sm:text-lg">
               Whether you need a modern website, responsive user interface,
               or front-end development support, I’m available to help bring
               your ideas to life.
@@ -84,7 +84,7 @@ function Contact() {
           </motion.div>
 
           {/* Main Grid */}
-          <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:gap-8">
 
             {/* Left Professional Info */}
             <motion.div
@@ -92,21 +92,21 @@ function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-[2.5rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-8 shadow-[0_0_60px_rgba(205,255,69,0.05)]"
+              className="relative overflow-hidden rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-6 shadow-[0_0_60px_rgba(205,255,69,0.05)] sm:p-8 lg:rounded-[2.5rem]"
             >
 
               {/* Glow */}
-              <div className="absolute -left-16 top-10 h-52 w-52 rounded-full bg-[#CDFF45]/10 blur-3xl" />
+              <div className="absolute -left-16 top-10 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl sm:h-52 sm:w-52" />
 
               <div className="relative z-10">
 
-                <div className="mb-12">
+                <div className="mb-10 sm:mb-12">
 
-                  <h3 className="mb-4 text-3xl font-bold">
+                  <h3 className="mb-4 text-2xl font-bold sm:text-3xl">
                     Contact Information
                   </h3>
 
-                  <p className="leading-relaxed text-white/60">
+                  <p className="text-sm leading-relaxed text-white/60 sm:text-base">
                     Feel free to reach out for freelance projects,
                     collaborations, or front-end development opportunities.
                   </p>
@@ -114,39 +114,39 @@ function Contact() {
                 </div>
 
                 {/* Contact Cards */}
-                <div className="space-y-5">
+                <div className="space-y-4 sm:space-y-5">
 
-                  <div className="rounded-3xl border border-[#CDFF45]/10 bg-white/[0.03] p-6 transition duration-300 hover:border-[#CDFF45]/30">
+                  <div className="rounded-2xl border border-[#CDFF45]/10 bg-white/[0.03] p-5 transition duration-300 hover:border-[#CDFF45]/30 sm:rounded-3xl sm:p-6">
 
-                    <p className="mb-2 text-sm tracking-wide text-[#CDFF45]">
+                    <p className="mb-2 text-xs tracking-wide text-[#CDFF45] sm:text-sm">
                       EMAIL
                     </p>
 
-                    <h4 className="text-lg font-semibold text-white">
+                    <h4 className="break-words text-base font-semibold text-white sm:text-lg">
                       ninoverdejo@gmail.com
                     </h4>
 
                   </div>
 
-                  <div className="rounded-3xl border border-[#CDFF45]/10 bg-white/[0.03] p-6 transition duration-300 hover:border-[#CDFF45]/30">
+                  <div className="rounded-2xl border border-[#CDFF45]/10 bg-white/[0.03] p-5 transition duration-300 hover:border-[#CDFF45]/30 sm:rounded-3xl sm:p-6">
 
-                    <p className="mb-2 text-sm tracking-wide text-[#CDFF45]">
+                    <p className="mb-2 text-xs tracking-wide text-[#CDFF45] sm:text-sm">
                       AVAILABILITY
                     </p>
 
-                    <h4 className="text-lg font-semibold text-white">
+                    <h4 className="text-base font-semibold text-white sm:text-lg">
                       Open for Freelance & Remote Work
                     </h4>
 
                   </div>
 
-                  <div className="rounded-3xl border border-[#CDFF45]/10 bg-white/[0.03] p-6 transition duration-300 hover:border-[#CDFF45]/30">
+                  <div className="rounded-2xl border border-[#CDFF45]/10 bg-white/[0.03] p-5 transition duration-300 hover:border-[#CDFF45]/30 sm:rounded-3xl sm:p-6">
 
-                    <p className="mb-2 text-sm tracking-wide text-[#CDFF45]">
+                    <p className="mb-2 text-xs tracking-wide text-[#CDFF45] sm:text-sm">
                       RESPONSE TIME
                     </p>
 
-                    <h4 className="text-lg font-semibold text-white">
+                    <h4 className="text-base font-semibold text-white sm:text-lg">
                       Within 24 Hours
                     </h4>
 
@@ -163,17 +163,17 @@ function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="rounded-[2.5rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-10 shadow-[0_0_60px_rgba(205,255,69,0.05)] backdrop-blur-xl"
+              className="rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-6 shadow-[0_0_60px_rgba(205,255,69,0.05)] backdrop-blur-xl sm:p-8 lg:rounded-[2.5rem] lg:p-10"
             >
 
               <form
                 ref={form}
                 onSubmit={sendEmail}
-                className="grid gap-7"
+                className="grid gap-6 sm:gap-7"
               >
 
                 {/* Name & Email */}
-                <div className="grid gap-6 md:grid-cols-2">
+                <div className="grid gap-5 md:grid-cols-2 md:gap-6">
 
                   <div>
                     <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
@@ -184,7 +184,7 @@ function Contact() {
                       type="text"
                       name="from_name"
                       placeholder="John Doe"
-                      className="w-full rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-5 py-4 text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20"
+                      className="w-full rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-4 py-3 text-sm text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20 sm:px-5 sm:py-4 sm:text-base"
                       required
                     />
                   </div>
@@ -198,7 +198,7 @@ function Contact() {
                       type="email"
                       name="from_email"
                       placeholder="john@example.com"
-                      className="w-full rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-5 py-4 text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20"
+                      className="w-full rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-4 py-3 text-sm text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20 sm:px-5 sm:py-4 sm:text-base"
                       required
                     />
                   </div>
@@ -215,7 +215,7 @@ function Contact() {
                     name="message"
                     rows="7"
                     placeholder="Tell me about your project, goals, or collaboration idea..."
-                    className="w-full resize-none rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-5 py-4 text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20"
+                    className="w-full resize-none rounded-2xl border border-[#CDFF45]/15 bg-black/50 px-4 py-3 text-sm text-white outline-none transition duration-300 placeholder:text-white/25 focus:border-[#CDFF45]/50 focus:ring-2 focus:ring-[#CDFF45]/20 sm:px-5 sm:py-4 sm:text-base"
                     required
                   />
                 </div>
@@ -224,13 +224,14 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`group flex items-center justify-center gap-3 rounded-2xl py-4 text-lg font-bold text-black transition duration-300 ${
+                  className={`group flex items-center justify-center gap-3 rounded-2xl py-3 text-base font-bold text-black transition duration-300 sm:py-4 sm:text-lg ${
                     loading
                       ? "cursor-not-allowed bg-gray-600"
                       : "bg-[#CDFF45] hover:-translate-y-1 hover:bg-[#bdfc24]"
                   }`}
                 >
                   {loading ? "Sending Message..." : "Send Message"}
+
                   {!loading && (
                     <span className="transition duration-300 group-hover:translate-x-1">
                       →
