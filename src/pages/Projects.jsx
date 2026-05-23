@@ -4,10 +4,8 @@ import AnimatedSection from "../components/AnimatedSection";
 import portfolioImage from "../assets/projects/portfolio.png";
 import ecommerceImage from "../assets/projects/ecommerce.png";
 import dashboardImage from "../assets/projects/dashboard.png";
-import chatappImage from "../assets/projects/chatapp.jpg";
 import taskmanagerImage from "../assets/projects/taskmanager.jpg";
 import weatherappImage from "../assets/projects/weatherapp.jpg";
-import bookingappImage from "../assets/projects/bookingapp.jpg";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -71,19 +69,12 @@ function Projects() {
     <AnimatedSection>
       <section
         id="projects"
-        className="bg-black text-white py-20 px-6 relative overflow-hidden"
+        className="relative overflow-hidden bg-black px-6 py-20 text-white"
       >
+        {/* Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.08)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-        {/* Background Glow */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
-        </div>
-
-        {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="relative z-10 mx-auto max-w-7xl">
 
           {/* Heading */}
           <motion.div
@@ -91,22 +82,22 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          > 
-<h2 className="text-4xl font-bold mb-6 leading-tight text-center">
-
+          >
+            <h2 className="mb-6 text-center text-4xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
                 Projects
               </span>
             </h2>
 
-            <p className="text-slate-400 text-center max-w-2xl mx-auto mb-14">
-              A collection of modern web applications and UI projects built using React, Tailwind CSS, and modern web technologies.
+            <p className="mx-auto mb-14 max-w-2xl text-center text-slate-400">
+              A collection of modern web applications and UI projects
+              built using React, Tailwind CSS, and modern web technologies.
             </p>
           </motion.div>
 
           {/* Projects Grid */}
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -116,8 +107,8 @@ function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                className="group rounded-2xl overflow-hidden border border-[#CDFF45]/10 bg-black/70 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-xl hover:shadow-[#CDFF45]/10"
+                whileHover={{ scale: 1.03 }}
+                className="group overflow-hidden rounded-2xl border border-[#CDFF45]/10 bg-black/70 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40"
               >
 
                 {/* Image */}
@@ -125,22 +116,22 @@ function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-52 object-cover group-hover:scale-110 transition duration-500"
+                    className="h-52 w-full object-cover transition duration-500 group-hover:scale-110"
                   />
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
 
-                  <h3 className="text-2xl font-semibold mb-3 text-[#CDFF45]">
+                  <h3 className="mb-3 text-2xl font-semibold text-[#CDFF45]">
                     {project.title}
                   </h3>
 
-                  <p className="text-slate-300 text-sm leading-relaxed">
+                  <p className="text-sm leading-relaxed text-slate-300">
                     {project.description}
                   </p>
 
-                  <p className="text-sm mt-4 text-[#A3E635]">
+                  <p className="mt-4 text-sm text-[#A3E635]">
                     {project.tech}
                   </p>
 

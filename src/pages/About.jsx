@@ -6,75 +6,67 @@ function About() {
     <AnimatedSection>
       <section
         id="about"
-        className="bg-transparent text-white py-20 relative overflow-hidden"
+        className="relative overflow-hidden bg-black py-20 text-white"
       >
+        {/* Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.08)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-        {/* Background Glow */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2">
 
           {/* Image */}
           <div className="flex justify-center">
-            <div className="relative group">
-
-              {/* Glow border */}
-              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-[#CDFF45] to-[#A3E635] blur-2xl opacity-30 group-hover:opacity-70 transition duration-500"></div>
-
-              <img
-                src={profile}
-                alt="Profile"
-                className="relative w-72 h-72 object-cover rounded-[2rem] border border-[#CDFF45]/30 shadow-2xl shadow-[#CDFF45]/10 hover:scale-105 transition duration-500"
-              />
-            </div>
+            <img
+              src={profile}
+              alt="Profile"
+              className="w-72 h-72 rounded-[2rem] object-cover border border-[#CDFF45]/30 shadow-2xl shadow-[#CDFF45]/10 transition duration-300 hover:scale-105"
+            />
           </div>
 
           {/* Text */}
-          <div className="rounded-[2rem] border border-white/10 bg-black/70 p-10 shadow-2xl backdrop-blur-xl">
+          <div className="rounded-[2rem] border border-white/10 bg-black/70 p-10 backdrop-blur-xl">
 
-            <p className="text-[#CDFF45] uppercase tracking-[0.2em] text-sm mb-3">
+            <p className="mb-3 text-sm uppercase tracking-[0.2em] text-[#CDFF45]">
               Get To Know Me
             </p>
 
-            <h2 className="text-4xl font-bold mb-6 leading-tight">
+            <h2 className="mb-6 text-4xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
                 About Me
               </span>
             </h2>
 
-            <p className="text-slate-300 leading-relaxed">
-              I am Front-End Developer and QA Tester with a passion
-              for creating modern, responsive, and user-friendly web applications.
-            </p>
+            <div className="space-y-4 text-slate-300 leading-relaxed">
+              <p>
+                I am a Front-End Developer and QA Tester passionate about
+                creating modern, responsive, and user-friendly web applications.
+              </p>
 
-            <p className="text-slate-300 leading-relaxed mt-4">
-              I specialize in React.js, JavaScript, Tailwind CSS, HTML, and CSS.
-            </p>
+              <p>
+                I specialize in React.js, JavaScript, Tailwind CSS, HTML, and CSS.
+              </p>
 
-            <p className="text-slate-300 leading-relaxed mt-4">
-              With a background in design and customer service,
-              I bring creativity and communication skills.
-            </p>
+              <p>
+                With a background in design and customer service,
+                I bring creativity and communication skills.
+              </p>
 
-            <p className="text-slate-300 leading-relaxed mt-4">
-              My goal is to become a professional software developer
-              building impactful digital solutions.
-            </p>
+              <p>
+                My goal is to become a professional software developer
+                building impactful digital solutions.
+              </p>
+            </div>
 
             {/* Goals & Vision */}
-            <div className="mt-8 grid md:grid-cols-2 gap-4">
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
 
               {/* Goals */}
-              <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/70 p-6 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/20 transition duration-300">
+              <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/70 p-6 transition duration-300 hover:border-[#CDFF45]/40">
 
-                <h3 className="text-xl font-semibold text-[#CDFF45] mb-3 text-center">
+                <h3 className="mb-3 text-center text-xl font-semibold text-[#CDFF45]">
                   My Goals
                 </h3>
 
-                <p className="text-slate-300 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-slate-300">
                   Grow as a developer by building real-world projects
                   and improving technical skills.
                 </p>
@@ -82,13 +74,13 @@ function About() {
               </div>
 
               {/* Vision */}
-              <div className="rounded-2xl border border-[#A3E635]/20 bg-black/70 p-6 hover:border-[#A3E635]/40 hover:shadow-lg hover:shadow-[#A3E635]/20 transition duration-300">
+              <div className="rounded-2xl border border-[#A3E635]/20 bg-black/70 p-6 transition duration-300 hover:border-[#A3E635]/40">
 
-                <h3 className="text-xl font-semibold text-[#A3E635] mb-3 text-center">
+                <h3 className="mb-3 text-center text-xl font-semibold text-[#A3E635]">
                   My Vision
                 </h3>
 
-                <p className="text-slate-300 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-slate-300">
                   To become a skilled developer creating scalable
                   and impactful digital products.
                 </p>
@@ -100,7 +92,6 @@ function About() {
           </div>
 
         </div>
-
       </section>
     </AnimatedSection>
   );
