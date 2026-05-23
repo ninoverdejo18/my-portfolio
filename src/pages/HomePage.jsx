@@ -10,10 +10,11 @@ function HomePage() {
 
         {/* Background Effects */}
         <div className="absolute inset-0">
-          
+
           <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(205,255,69,0.08),transparent_45%)]" />
+
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,6 +38,7 @@ function HomePage() {
                 {/* Heading */}
                 <h2 className="mb-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:mb-6 lg:text-5xl">
                   Designing clean &
+
                   <span className="block bg-gradient-to-r from-[#CDFF45] to-[#A3E635] bg-clip-text text-transparent">
                     modern web experiences
                   </span>
@@ -54,21 +56,21 @@ function HomePage() {
 
                   <Link
                     to="/about"
-                    className="group rounded-2xl bg-[#CDFF45] px-6 py-3 text-center font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#bdfc24] sm:px-7"
+                    className="group rounded-2xl bg-[#CDFF45] px-6 py-3 text-center font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#bdfc24]"
                   >
                     About Me
                   </Link>
 
                   <Link
                     to="/skills"
-                    className="rounded-2xl border border-[#CDFF45]/25 bg-white/[0.02] px-6 py-3 text-center font-medium transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 sm:px-7"
+                    className="rounded-2xl border border-[#CDFF45]/25 bg-white/[0.02] px-6 py-3 text-center font-medium transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10"
                   >
                     Skills
                   </Link>
 
                   <Link
                     to="/projects"
-                    className="rounded-2xl border border-[#CDFF45]/25 bg-white/[0.02] px-6 py-3 text-center font-medium transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 sm:px-7"
+                    className="rounded-2xl border border-[#CDFF45]/25 bg-white/[0.02] px-6 py-3 text-center font-medium transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10"
                   >
                     Projects
                   </Link>
@@ -110,7 +112,7 @@ function HomePage() {
                 {/* CTA */}
                 <Link
                   to="/contact"
-                  className="inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-[#CDFF45] px-6 py-3 text-center font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#bdfc24] sm:w-fit sm:px-7"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-[#CDFF45] px-6 py-3 text-center font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#bdfc24] sm:w-fit"
                 >
                   Send a Message
                   <span>→</span>

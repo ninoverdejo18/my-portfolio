@@ -84,7 +84,6 @@ function Skills() {
             </span>
 
             <h2 className="mb-5 text-3xl font-black leading-tight sm:text-5xl lg:mb-6">
-              Technologies &
               <span className="block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
                 Professional Skills
               </span>

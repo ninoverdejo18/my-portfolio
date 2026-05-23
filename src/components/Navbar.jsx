@@ -9,10 +9,10 @@ function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-[#CDFF45]/10 bg-black/80 text-white backdrop-blur-md">
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
-        <Link to="/" className="z-50">
+        <Link to="/" className="z-50 flex items-center">
           <img
             src={logo}
             alt="Nino Logo"
@@ -21,12 +21,12 @@ function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden items-center gap-6 lg:gap-8 md:flex">
+        <ul className="hidden md:flex md:items-center md:gap-4 lg:gap-5">
 
           <li>
             <Link
               to="/"
-              className="text-sm transition duration-300 hover:text-[#CDFF45] lg:text-base"
+              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
             >
               Home
             </Link>
@@ -35,7 +35,7 @@ function Navbar() {
           <li>
             <Link
               to="/about"
-              className="text-sm transition duration-300 hover:text-[#CDFF45] lg:text-base"
+              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
             >
               About
             </Link>
@@ -44,7 +44,7 @@ function Navbar() {
           <li>
             <Link
               to="/skills"
-              className="text-sm transition duration-300 hover:text-[#CDFF45] lg:text-base"
+              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
             >
               Skills
             </Link>
@@ -53,7 +53,7 @@ function Navbar() {
           <li>
             <Link
               to="/projects"
-              className="text-sm transition duration-300 hover:text-[#CDFF45] lg:text-base"
+              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
             >
               Projects
             </Link>
@@ -62,7 +62,7 @@ function Navbar() {
           <li>
             <Link
               to="/contact"
-              className="rounded-xl border border-[#CDFF45]/20 px-4 py-2 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45] lg:text-base"
+              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
             >
               Contact
             </Link>
@@ -91,7 +91,7 @@ function Navbar() {
         }`}
       >
 
-        <ul className="flex flex-col gap-2 px-4 py-4">
+        <ul className="flex flex-col gap-1 px-4 py-4">
 
           <li>
             <Link
