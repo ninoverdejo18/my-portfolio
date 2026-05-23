@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import AnimatedSection from "../components/AnimatedSection";
 
 import portfolioImage from "../assets/projects/portfolio.png";
@@ -37,8 +36,6 @@ function Projects() {
         "Modern responsive portfolio website built with React and Tailwind CSS.",
       tech: "React • Tailwind CSS • Vite",
       image: portfolioImage,
-      demo: "#",
-      github: "#",
       color: "cyan",
     },
     {
@@ -47,8 +44,6 @@ function Projects() {
         "Online shopping platform with product listings, cart system, and checkout UI.",
       tech: "React • Firebase • Tailwind",
       image: ecommerceImage,
-      demo: "#",
-      github: "#",
       color: "red",
     },
     {
@@ -57,8 +52,6 @@ function Projects() {
         "Interactive admin dashboard with charts, analytics, and responsive layout.",
       tech: "React • Chart.js • CSS",
       image: dashboardImage,
-      demo: "#",
-      github: "#",
       color: "cyan",
     },
     {
@@ -67,8 +60,6 @@ function Projects() {
         "Productivity application for task organization and project management.",
       tech: "React • Local Storage • Tailwind",
       image: taskmanagerImage,
-      demo: "#",
-      github: "#",
       color: "red",
     },
     {
@@ -77,8 +68,6 @@ function Projects() {
         "Weather forecast application using live API integration and responsive UI.",
       tech: "React • OpenWeather API • CSS",
       image: weatherappImage,
-      demo: "#",
-      github: "#",
       color: "cyan",
     },
   ];
@@ -99,7 +88,7 @@ function Projects() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          
+
           {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,12 +147,12 @@ function Projects() {
                     {project.title}
                   </h3>
 
-                  <p className="text-slate-300 mb-4 text-sm leading-relaxed">
+                  <p className="text-slate-300 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
                   <p
-                    className={`text-sm mb-6 ${
+                    className={`text-sm mt-4 ${
                       project.color === "cyan"
                         ? "text-cyan-300"
                         : "text-red-300"
@@ -171,38 +160,6 @@ function Projects() {
                   >
                     {project.tech}
                   </p>
-
-                  <div className="flex gap-4">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition duration-300
-                        ${
-                          project.color === "cyan"
-                            ? "bg-cyan-500 hover:bg-cyan-600 text-black"
-                            : "bg-red-500 hover:bg-red-600 text-white"
-                        }
-                      `}
-                    >
-                      Live Demo
-                    </a>
-
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`px-4 py-2 rounded-lg text-sm font-medium border transition duration-300
-                        ${
-                          project.color === "cyan"
-                            ? "border-cyan-500/40 hover:bg-cyan-500/10 hover:border-cyan-400"
-                            : "border-red-500/40 hover:bg-red-500/10 hover:border-red-400"
-                        }
-                      `}
-                    >
-                      GitHub
-                    </a>
-                  </div>
                 </div>
               </motion.div>
             ))}

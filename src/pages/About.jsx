@@ -8,10 +8,11 @@ function About() {
         id="about"
         className="bg-transparent text-white py-20 relative overflow-hidden"
       >
+
         {/* Background Glow */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/15 blur-3xl rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-red-500/15 blur-3xl rounded-full"></div>
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#40E0D0]/10 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#F2545B]/10 blur-3xl rounded-full"></div>
         </div>
 
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
@@ -20,96 +21,76 @@ function About() {
           <div className="flex justify-center">
             <div className="relative group">
 
-              {/* Gradient Glow */}
-              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-cyan-500 via-red-500 to-cyan-400 blur-2xl opacity-40 group-hover:opacity-80 transition duration-500"></div>
+              {/* Glow border */}
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-[#40E0D0] to-[#F2545B] blur-2xl opacity-30 group-hover:opacity-70 transition duration-500"></div>
 
               <img
                 src={profile}
                 alt="Profile"
-                className="relative w-72 h-72 object-cover rounded-[2rem] border border-cyan-400/30 shadow-2xl shadow-red-500/10 hover:scale-105 transition duration-500"
+                className="relative w-72 h-72 object-cover rounded-[2rem] border border-[#40E0D0]/30 shadow-2xl shadow-[#F2545B]/10 hover:scale-105 transition duration-500"
               />
             </div>
           </div>
 
           {/* Text */}
-          <div className="rounded-[2rem] border border-cyan-500/10 bg-slate-950/70 p-10 shadow-2xl shadow-red-950/20 backdrop-blur-xl">
+          <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-10 shadow-2xl backdrop-blur-xl">
 
-            {/* Subtitle */}
-            <p className="uppercase tracking-[0.25em] text-sm mb-3 font-semibold bg-gradient-to-r from-cyan-400 to-red-400 bg-clip-text text-transparent">
+            <p className="text-[#40E0D0] uppercase tracking-[0.2em] text-sm mb-3">
               Get To Know Me
             </p>
 
-            {/* Title */}
-            <h2 className="text-4xl font-bold mb-6 leading-tight bg-gradient-to-r from-cyan-400 via-white to-red-400 bg-clip-text text-transparent">
-              About Me
+            <h2 className="text-4xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-[#40E0D0] to-[#F2545B] bg-clip-text text-transparent">
+                About Me
+              </span>
             </h2>
 
-            {/* Paragraphs */}
             <p className="text-slate-300 leading-relaxed">
               I am Front-End Developer and QA Tester with a passion
               for creating modern, responsive, and user-friendly web applications.
-              My journey into web development started from my interest in design,
-              technology, and problem-solving, which inspired me to continuously
-              learn and improve my skills in modern web technologies.
             </p>
 
             <p className="text-slate-300 leading-relaxed mt-4">
-              I specialize in building clean interfaces using React.js,
-              JavaScript, Tailwind CSS, HTML, and CSS. I enjoy transforming ideas
-              into real-world digital experiences that are visually appealing,
-              functional, and optimized for performance across different devices.
+              I specialize in React.js, JavaScript, Tailwind CSS, HTML, and CSS.
             </p>
 
             <p className="text-slate-300 leading-relaxed mt-4">
-              With a background in graphic design and customer service,
-              I developed good communication, creativity, and attention to
-              detail — qualities that help me create better user experiences
-              and collaborate effectively with teams and clients.
+              With a background in design and customer service,
+              I bring creativity and communication skills.
             </p>
 
             <p className="text-slate-300 leading-relaxed mt-4">
-              As an IT graduate, I continue exploring new technologies,
-              improving my development workflow, and building projects that
-              challenge my creativity and technical abilities. My goal is to
-              become a professional software developer who delivers impactful,
-              high-quality, and innovative web solutions.
+              My goal is to become a professional software developer
+              building impactful digital solutions.
             </p>
 
             {/* Goals & Vision */}
             <div className="mt-8 grid md:grid-cols-2 gap-4">
 
               {/* Goals */}
-              <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/70 p-6 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition duration-300">
+              <div className="rounded-2xl border border-[#40E0D0]/20 bg-slate-900/70 p-6 hover:border-[#40E0D0]/40 hover:shadow-lg hover:shadow-[#40E0D0]/20 transition duration-300">
 
-                <h3 className="text-xl font-semibold text-cyan-400 mb-3 text-center">
+                <h3 className="text-xl font-semibold text-[#40E0D0] mb-3 text-center">
                   My Goals
                 </h3>
 
-                <p className="text-slate-300 leading-relaxed text-sm text-left">
-                  My goal is to continuously grow as a Front-End Developer
-                  by building real-world projects, improving my technical
-                  expertise, and creating modern applications that provide
-                  meaningful user experiences. I aim to contribute to
-                  innovative teams where I can apply my creativity,
-                  problem-solving skills, and passion for technology.
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  Grow as a developer by building real-world projects
+                  and improving technical skills.
                 </p>
 
               </div>
 
               {/* Vision */}
-              <div className="rounded-2xl border border-red-500/20 bg-slate-900/70 p-6 hover:border-red-400/40 hover:shadow-lg hover:shadow-red-500/20 transition duration-300">
+              <div className="rounded-2xl border border-[#F2545B]/20 bg-slate-900/70 p-6 hover:border-[#F2545B]/40 hover:shadow-lg hover:shadow-[#F2545B]/20 transition duration-300">
 
-                <h3 className="text-xl font-semibold text-red-400 mb-3 text-center">
+                <h3 className="text-xl font-semibold text-[#F2545B] mb-3 text-center">
                   My Vision
                 </h3>
 
-                <p className="text-slate-300 leading-relaxed text-sm text-left">
-                  I envision becoming a highly skilled software developer
-                  capable of building scalable, impactful, and visually
-                  engaging digital products. I strive to combine clean
-                  code, modern UI/UX principles, and innovative thinking
-                  to create solutions that positively improve user
-                  interaction and business growth.
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  To become a skilled developer creating scalable
+                  and impactful digital products.
                 </p>
 
               </div>
