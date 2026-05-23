@@ -4,30 +4,47 @@ import AnimatedSection from "../components/AnimatedSection";
 function About() {
   return (
     <AnimatedSection>
-      <section id="about" className="bg-transparent text-white py-20">
+      <section
+        id="about"
+        className="bg-transparent text-white py-20 relative overflow-hidden"
+      >
+        {/* Background Glow */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/15 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-red-500/15 blur-3xl rounded-full"></div>
+        </div>
 
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src={profile}
-              alt="Profile"
-              className="w-72 h-72 object-cover rounded-[2rem] border border-slate-700 shadow-2xl shadow-slate-950/30 hover:scale-105 transition duration-500"
-            />
+            <div className="relative group">
+
+              {/* Gradient Glow */}
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-cyan-500 via-red-500 to-cyan-400 blur-2xl opacity-40 group-hover:opacity-80 transition duration-500"></div>
+
+              <img
+                src={profile}
+                alt="Profile"
+                className="relative w-72 h-72 object-cover rounded-[2rem] border border-cyan-400/30 shadow-2xl shadow-red-500/10 hover:scale-105 transition duration-500"
+              />
+            </div>
           </div>
 
           {/* Text */}
-          <div className="rounded-[2rem] border border-white/10 bg-slate-950/65 p-10 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
+          <div className="rounded-[2rem] border border-cyan-500/10 bg-slate-950/70 p-10 shadow-2xl shadow-red-950/20 backdrop-blur-xl">
 
-            <p className="text-cyan-400 uppercase tracking-[0.2em] text-sm mb-3">
+            {/* Subtitle */}
+            <p className="uppercase tracking-[0.25em] text-sm mb-3 font-semibold bg-gradient-to-r from-cyan-400 to-red-400 bg-clip-text text-transparent">
               Get To Know Me
             </p>
 
-            <h2 className="text-4xl font-bold mb-6 leading-tight">
+            {/* Title */}
+            <h2 className="text-4xl font-bold mb-6 leading-tight bg-gradient-to-r from-cyan-400 via-white to-red-400 bg-clip-text text-transparent">
               About Me
             </h2>
 
+            {/* Paragraphs */}
             <p className="text-slate-300 leading-relaxed">
               I am Front-End Developer and QA Tester with a passion
               for creating modern, responsive, and user-friendly web applications.
@@ -58,46 +75,46 @@ function About() {
               high-quality, and innovative web solutions.
             </p>
 
-{/* Goals & Vision */}
-<div className="mt-8 grid md:grid-cols-2 gap-4">
+            {/* Goals & Vision */}
+            <div className="mt-8 grid md:grid-cols-2 gap-4">
 
-  {/* Goals */}
-  <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/70 p-6 hover:border-cyan-400/40 transition duration-300">
+              {/* Goals */}
+              <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/70 p-6 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition duration-300">
 
-    <h3 className="text-xl font-semibold text-cyan-400 mb-3 text-center">
-      My Goals
-    </h3>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-3 text-center">
+                  My Goals
+                </h3>
 
-    <p className="text-slate-300 leading-relaxed text-sm text-left">
-      My goal is to continuously grow as a Front-End Developer
-      by building real-world projects, improving my technical
-      expertise, and creating modern applications that provide
-      meaningful user experiences. I aim to contribute to
-      innovative teams where I can apply my creativity,
-      problem-solving skills, and passion for technology.
-    </p>
+                <p className="text-slate-300 leading-relaxed text-sm text-left">
+                  My goal is to continuously grow as a Front-End Developer
+                  by building real-world projects, improving my technical
+                  expertise, and creating modern applications that provide
+                  meaningful user experiences. I aim to contribute to
+                  innovative teams where I can apply my creativity,
+                  problem-solving skills, and passion for technology.
+                </p>
 
-  </div>
+              </div>
 
-  {/* Vision */}
-  <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/70 p-6 hover:border-cyan-400/40 transition duration-300">
+              {/* Vision */}
+              <div className="rounded-2xl border border-red-500/20 bg-slate-900/70 p-6 hover:border-red-400/40 hover:shadow-lg hover:shadow-red-500/20 transition duration-300">
 
-    <h3 className="text-xl font-semibold text-cyan-400 mb-3 text-center">
-      My Vision
-    </h3>
+                <h3 className="text-xl font-semibold text-red-400 mb-3 text-center">
+                  My Vision
+                </h3>
 
-    <p className="text-slate-300 leading-relaxed text-sm text-left">
-      I envision becoming a highly skilled software developer
-      capable of building scalable, impactful, and visually
-      engaging digital products. I strive to combine clean
-      code, modern UI/UX principles, and innovative thinking
-      to create solutions that positively improve user
-      interaction and business growth.
-    </p>
+                <p className="text-slate-300 leading-relaxed text-sm text-left">
+                  I envision becoming a highly skilled software developer
+                  capable of building scalable, impactful, and visually
+                  engaging digital products. I strive to combine clean
+                  code, modern UI/UX principles, and innovative thinking
+                  to create solutions that positively improve user
+                  interaction and business growth.
+                </p>
 
-  </div>
+              </div>
 
-</div>
+            </div>
 
           </div>
 
