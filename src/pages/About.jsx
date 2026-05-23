@@ -72,10 +72,7 @@ function About() {
                   to build meaningful digital products.
                 </p>
 
-                <p>
-                  My long-term goal is to become a professional software
-                  developer creating scalable and impactful solutions.
-                </p>
+      
 
               </div>
 
