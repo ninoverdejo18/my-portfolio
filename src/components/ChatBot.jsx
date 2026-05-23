@@ -7,7 +7,7 @@ function ChatBot() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "Hi! I'm Odette's AI assistant 👋 Ask me anything.",
+      text: "Hi! I'm your AI assistant 👋 Ask me anything.",
       sender: "bot",
     },
   ]);
@@ -17,11 +17,8 @@ function ChatBot() {
 
   const messagesEndRef = useRef(null);
 
-  // Auto Scroll
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const handleSend = async () => {
@@ -33,23 +30,18 @@ function ChatBot() {
       sender: "user",
     };
 
-    // Add user message
     setMessages((prev) => [...prev, userMessage]);
 
     const updatedMessages = [
       {
         role: "system",
         content:
-          "You are Odette's professional AI portfolio assistant. Answer professionally, friendly, and concise. Help users learn about Odette's skills, projects, services, and experience.",
+          "You are a professional AI portfolio assistant. Be friendly, concise, and helpful.",
       },
-
-      // Previous chat history
       ...messages.map((msg) => ({
         role: msg.role,
         content: msg.text,
       })),
-
-      // Latest user message
       {
         role: "user",
         content: input,
@@ -60,13 +52,11 @@ function ChatBot() {
     setLoading(true);
 
     try {
-      // Calls your Vercel backend API
       const response = await axios.post("/api/chat", {
         messages: updatedMessages,
       });
 
-      const botReply =
-        response.data.choices[0].message.content;
+      const botReply = response.data.choices[0].message.content;
 
       setMessages((prev) => [
         ...prev,
@@ -77,16 +67,11 @@ function ChatBot() {
         },
       ]);
     } catch (error) {
-      console.error(
-        error.response?.data || error.message
-      );
-
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          text:
-            "Sorry, the AI assistant is currently unavailable.",
+          text: "AI assistant is currently unavailable.",
           sender: "bot",
         },
       ]);
@@ -97,20 +82,23 @@ function ChatBot() {
 
   return (
     <div>
+
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-5 right-5 bg-cyan-500 text-black px-5 py-3 rounded-full shadow-lg hover:bg-cyan-400 transition z-50 font-semibold"
+        className="fixed bottom-5 right-5 px-5 py-3 rounded-full font-semibold text-black shadow-lg transition z-50
+        bg-gradient-to-r from-[#CDFF45] to-[#A3E635]
+        hover:scale-105 hover:shadow-lg hover:shadow-[#CDFF45]/20"
       >
-        Odette AI
+        AI Assistant
       </button>
 
       {/* Chat Box */}
       {isOpen && (
-        <div className="fixed bottom-24 right-5 w-[350px] h-[500px] bg-slate-900 border border-cyan-500 rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col">
+        <div className="fixed bottom-24 right-5 w-[350px] h-[500px] bg-black/90 border border-[#CDFF45]/30 rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col backdrop-blur-xl">
 
           {/* Header */}
-          <div className="bg-cyan-500 text-black p-4 font-bold text-lg">
+          <div className="bg-gradient-to-r from-[#CDFF45] to-[#A3E635] text-black p-4 font-bold text-lg">
             AI Assistant
           </div>
 
@@ -122,8 +110,8 @@ function ChatBot() {
                 key={index}
                 className={`p-3 rounded-2xl max-w-[85%] text-sm leading-relaxed ${
                   msg.sender === "user"
-                    ? "bg-cyan-500 text-black ml-auto"
-                    : "bg-slate-700 text-white"
+                    ? "bg-[#CDFF45] text-black ml-auto"
+                    : "bg-slate-800 text-white border border-[#CDFF45]/10"
                 }`}
               >
                 {msg.text}
@@ -131,7 +119,7 @@ function ChatBot() {
             ))}
 
             {loading && (
-              <div className="bg-slate-700 text-white p-3 rounded-2xl w-fit animate-pulse">
+              <div className="bg-slate-800 text-white p-3 rounded-2xl w-fit animate-pulse border border-[#CDFF45]/30">
                 AI is typing...
               </div>
             )}
@@ -140,31 +128,32 @@ function ChatBot() {
           </div>
 
           {/* Input Area */}
-          <div className="flex border-t border-slate-700 bg-slate-800">
+          <div className="flex border-t border-[#CDFF45]/20 bg-slate-900">
 
             <input
               type="text"
               placeholder="Ask anything..."
               value={input}
-              onChange={(e) =>
-                setInput(e.target.value)
-              }
-              onKeyDown={(e) =>
-                e.key === "Enter" && handleSend()
-              }
-              className="flex-1 bg-transparent text-white px-4 py-4 outline-none"
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              className="flex-1 bg-transparent text-white px-4 py-4 outline-none focus:ring-1 focus:ring-[#CDFF45]"
             />
 
             <button
               onClick={handleSend}
               disabled={loading}
-              className="bg-cyan-500 text-black px-5 hover:bg-cyan-400 transition font-semibold"
+              className="px-5 font-semibold text-black transition
+              bg-gradient-to-r from-[#CDFF45] to-[#A3E635]
+              hover:opacity-90"
             >
               Send
             </button>
+
           </div>
+
         </div>
       )}
+
     </div>
   );
 }

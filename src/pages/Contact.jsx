@@ -1,22 +1,22 @@
-import { useRef, useState } from "react"
-import AnimatedSection from "../components/AnimatedSection"
-import emailjs from "@emailjs/browser"
+import { useRef, useState } from "react";
+import AnimatedSection from "../components/AnimatedSection";
+import emailjs from "@emailjs/browser";
 
-emailjs.init("Um40NagmPxC9YUZAO")
+emailjs.init("Um40NagmPxC9YUZAO");
 
 function Contact() {
-  const form = useRef()
+  const form = useRef();
 
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState("")
-  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
   const sendEmail = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    setLoading(true)
-    setSuccess("")
-    setError("")
+    setLoading(true);
+    setSuccess("");
+    setError("");
 
     try {
       await emailjs.sendForm(
@@ -24,22 +24,23 @@ function Contact() {
         "template_sym6wks",
         form.current,
         "Um40NagmPxC9YUZAO"
-      )
+      );
 
-      alert("Successfully sent message.")
-      setSuccess("Successfully sent message.")
-      form.current.reset()
+      alert("Successfully sent message.");
+      setSuccess("Successfully sent message.");
+      form.current.reset();
     } catch (err) {
-      console.error("EmailJS send error:", err)
-      const message =
-        err?.text || err?.message || "Failed to send message. Please try again."
+      console.error("EmailJS send error:", err);
 
-      alert(message)
-      setError(message)
+      const message =
+        err?.text || err?.message || "Failed to send message. Please try again.";
+
+      alert(message);
+      setError(message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <AnimatedSection>
@@ -50,14 +51,14 @@ function Contact() {
 
         {/* Background Glow */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-red-500/10 blur-3xl rounded-full"></div>
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
         </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center">
 
           {/* Heading */}
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-white to-red-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
             Contact Me
           </h2>
 
@@ -66,7 +67,7 @@ function Contact() {
           </p>
 
           {/* Form Container */}
-          <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-2xl backdrop-blur-xl">
+          <div className="rounded-[2rem] border border-[#CDFF45]/20 bg-black/70 p-8 shadow-2xl shadow-[#CDFF45]/10 backdrop-blur-xl">
 
             <form
               ref={form}
@@ -79,7 +80,7 @@ function Contact() {
                 type="text"
                 name="from_name"
                 placeholder="Your Name"
-                className="p-4 rounded-xl bg-slate-900 border border-cyan-500/20 text-white outline-none transition duration-300 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-400"
+                className="p-4 rounded-xl bg-slate-900 border border-[#CDFF45]/20 text-white outline-none transition duration-300 focus:ring-2 focus:ring-[#CDFF45] focus:border-[#CDFF45]"
                 required
               />
 
@@ -88,7 +89,7 @@ function Contact() {
                 type="email"
                 name="from_email"
                 placeholder="Your Email"
-                className="p-4 rounded-xl bg-slate-900 border border-red-500/20 text-white outline-none transition duration-300 focus:ring-2 focus:ring-red-500 focus:border-red-400"
+                className="p-4 rounded-xl bg-slate-900 border border-[#CDFF45]/20 text-white outline-none transition duration-300 focus:ring-2 focus:ring-[#CDFF45] focus:border-[#CDFF45]"
                 required
               />
 
@@ -97,7 +98,7 @@ function Contact() {
                 name="message"
                 placeholder="Your Message"
                 rows="5"
-                className="p-4 rounded-xl bg-slate-900 border border-cyan-500/20 text-white outline-none transition duration-300 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-400 resize-none"
+                className="p-4 rounded-xl bg-slate-900 border border-[#CDFF45]/20 text-white outline-none transition duration-300 focus:ring-2 focus:ring-[#CDFF45] focus:border-[#CDFF45] resize-none"
                 required
               />
 
@@ -105,10 +106,10 @@ function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className={`py-4 rounded-xl font-semibold text-white transition duration-300 ${
+                className={`py-4 rounded-xl font-semibold text-black transition duration-300 ${
                   loading
                     ? "bg-gray-600 cursor-not-allowed"
-                    : "bg-gradient-to-r from-cyan-500 to-red-500 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20"
+                    : "bg-gradient-to-r from-[#CDFF45] to-[#A3E635] hover:scale-[1.02] hover:shadow-lg hover:shadow-[#CDFF45]/20"
                 }`}
               >
                 {loading ? "Sending..." : "Send Message"}
@@ -116,7 +117,7 @@ function Contact() {
 
               {/* Success Message */}
               {success && (
-                <p className="text-green-400 font-medium">
+                <p className="text-[#CDFF45] font-medium">
                   {success}
                 </p>
               )}
@@ -135,7 +136,7 @@ function Contact() {
         </div>
       </section>
     </AnimatedSection>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

@@ -9,8 +9,8 @@ function Hero() {
 
         {/* Background Glow */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20">
-          <div className="absolute w-80 h-80 bg-cyan-500 rounded-full blur-3xl top-20 left-10"></div>
-          <div className="absolute w-80 h-80 bg-red-500 rounded-full blur-3xl bottom-10 right-10"></div>
+          <div className="absolute w-80 h-80 bg-[#CDFF45] rounded-full blur-3xl top-20 left-10"></div>
+          <div className="absolute w-80 h-80 bg-[#A3E635] rounded-full blur-3xl bottom-10 right-10"></div>
         </div>
 
         {/* Grid Overlay */}
@@ -23,7 +23,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-cyan-400 text-lg mb-4 tracking-[0.2em] uppercase font-medium"
+            className="text-[#CDFF45] text-lg mb-4 tracking-[0.2em] uppercase font-medium"
           >
             Front-End Developer • QA Tester • Graphic Designer
           </motion.p>
@@ -37,7 +37,7 @@ function Hero() {
           >
             Building Modern <br />
 
-            <span className="bg-gradient-to-r from-cyan-400 via-white to-red-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
               Web Experiences
             </span>
           </motion.h1>
@@ -62,8 +62,8 @@ function Hero() {
           {/* Stats */}
           <div className="flex flex-wrap gap-8 mt-10">
 
-            <div className="bg-slate-900/60 border border-cyan-500/20 px-6 py-4 rounded-2xl backdrop-blur-lg hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/10 transition duration-300">
-              <h3 className="text-3xl font-bold text-cyan-400">
+            <div className="bg-black/60 border border-[#CDFF45]/20 px-6 py-4 rounded-2xl backdrop-blur-lg hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 transition duration-300">
+              <h3 className="text-3xl font-bold text-[#CDFF45]">
                 5
               </h3>
               <p className="text-slate-400">
@@ -71,8 +71,8 @@ function Hero() {
               </p>
             </div>
 
-            <div className="bg-slate-900/60 border border-red-500/20 px-6 py-4 rounded-2xl backdrop-blur-lg hover:border-red-400/40 hover:shadow-lg hover:shadow-red-500/10 transition duration-300">
-              <h3 className="text-3xl font-bold text-red-400">
+            <div className="bg-black/60 border border-[#A3E635]/20 px-6 py-4 rounded-2xl backdrop-blur-lg hover:border-[#A3E635]/40 hover:shadow-lg hover:shadow-[#A3E635]/10 transition duration-300">
+              <h3 className="text-3xl font-bold text-[#A3E635]">
                 2+
               </h3>
               <p className="text-slate-400">
@@ -80,8 +80,8 @@ function Hero() {
               </p>
             </div>
 
-            <div className="bg-slate-900/60 border border-cyan-500/20 px-6 py-4 rounded-2xl backdrop-blur-lg hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/10 transition duration-300">
-              <h3 className="text-3xl font-bold text-cyan-400">
+            <div className="bg-black/60 border border-[#CDFF45]/20 px-6 py-4 rounded-2xl backdrop-blur-lg hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 transition duration-300">
+              <h3 className="text-3xl font-bold text-[#CDFF45]">
                 100%
               </h3>
               <p className="text-slate-400">
@@ -97,7 +97,7 @@ function Hero() {
             {/* Projects */}
             <Link
               to="/projects"
-              className="bg-gradient-to-r from-cyan-500 to-red-500 hover:scale-105 text-white font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-lg shadow-cyan-500/10"
+              className="bg-gradient-to-r from-[#CDFF45] to-[#A3E635] hover:scale-105 text-black font-semibold px-6 py-3 rounded-xl transition duration-300 shadow-lg shadow-[#CDFF45]/10"
             >
               View Projects
             </Link>
@@ -105,7 +105,7 @@ function Hero() {
             {/* Contact */}
             <Link
               to="/contact"
-              className="border border-cyan-500/30 px-6 py-3 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition duration-300"
+              className="border border-[#CDFF45]/30 px-6 py-3 rounded-xl hover:bg-[#CDFF45]/10 hover:border-[#CDFF45] transition duration-300"
             >
               Contact Me
             </Link>
@@ -115,7 +115,7 @@ function Hero() {
               href="/Nino Verdejo.pdf"
               target="_blank"
               rel="noreferrer"
-              className="border border-red-500/30 px-6 py-3 rounded-xl hover:bg-red-500/10 hover:border-red-400 hover:text-red-300 transition duration-300"
+              className="border border-[#A3E635]/30 px-6 py-3 rounded-xl hover:bg-[#A3E635]/10 hover:border-[#A3E635] hover:text-[#CDFF45] transition duration-300"
             >
               Download Resume
             </a>

@@ -36,7 +36,6 @@ function Projects() {
         "Modern responsive portfolio website built with React and Tailwind CSS.",
       tech: "React • Tailwind CSS • Vite",
       image: portfolioImage,
-      color: "cyan",
     },
     {
       title: "E-Commerce Website",
@@ -44,7 +43,6 @@ function Projects() {
         "Online shopping platform with product listings, cart system, and checkout UI.",
       tech: "React • Firebase • Tailwind",
       image: ecommerceImage,
-      color: "red",
     },
     {
       title: "Admin Dashboard",
@@ -52,7 +50,6 @@ function Projects() {
         "Interactive admin dashboard with charts, analytics, and responsive layout.",
       tech: "React • Chart.js • CSS",
       image: dashboardImage,
-      color: "cyan",
     },
     {
       title: "Task Manager App",
@@ -60,7 +57,6 @@ function Projects() {
         "Productivity application for task organization and project management.",
       tech: "React • Local Storage • Tailwind",
       image: taskmanagerImage,
-      color: "red",
     },
     {
       title: "Weather App",
@@ -68,7 +64,6 @@ function Projects() {
         "Weather forecast application using live API integration and responsive UI.",
       tech: "React • OpenWeather API • CSS",
       image: weatherappImage,
-      color: "cyan",
     },
   ];
 
@@ -78,10 +73,11 @@ function Projects() {
         id="projects"
         className="bg-black text-white py-20 px-6 relative overflow-hidden"
       >
+
         {/* Background Glow */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-red-500/10 blur-3xl rounded-full"></div>
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#CDFF45]/10 blur-3xl rounded-full"></div>
         </div>
 
         {/* Grid Overlay */}
@@ -96,7 +92,7 @@ function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 via-white to-red-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
               Projects
             </h2>
 
@@ -118,14 +114,9 @@ function Projects() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
-                className={`group rounded-2xl overflow-hidden border backdrop-blur-lg transition duration-300
-                  ${
-                    project.color === "cyan"
-                      ? "bg-slate-900/70 border-cyan-500/20 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10"
-                      : "bg-slate-900/70 border-red-500/20 hover:border-red-400/50 hover:shadow-xl hover:shadow-red-500/10"
-                  }
-                `}
+                className="group rounded-2xl overflow-hidden border border-[#CDFF45]/10 bg-black/70 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-xl hover:shadow-[#CDFF45]/10"
               >
+
                 {/* Image */}
                 <div className="overflow-hidden">
                   <img
@@ -137,13 +128,8 @@ function Projects() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3
-                    className={`text-2xl font-semibold mb-3 ${
-                      project.color === "cyan"
-                        ? "text-cyan-400"
-                        : "text-red-400"
-                    }`}
-                  >
+
+                  <h3 className="text-2xl font-semibold mb-3 text-[#CDFF45]">
                     {project.title}
                   </h3>
 
@@ -151,19 +137,16 @@ function Projects() {
                     {project.description}
                   </p>
 
-                  <p
-                    className={`text-sm mt-4 ${
-                      project.color === "cyan"
-                        ? "text-cyan-300"
-                        : "text-red-300"
-                    }`}
-                  >
+                  <p className="text-sm mt-4 text-[#A3E635]">
                     {project.tech}
                   </p>
+
                 </div>
+
               </motion.div>
             ))}
           </motion.div>
+
         </div>
       </section>
     </AnimatedSection>

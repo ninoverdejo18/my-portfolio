@@ -32,18 +32,7 @@ function App() {
         <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      {/* Theme Switcher */}
-      <div className="fixed top-4 right-4 z-50 flex gap-2">
-        <button onClick={() => setTheme("dark")} className="px-3 py-1 bg-slate-800 rounded">
-          Dark
-        </button>
-        <button onClick={() => setTheme("light")} className="px-3 py-1 bg-gray-200 text-black rounded">
-          Light
-        </button>
-        <button onClick={() => setTheme("ocean")} className="px-3 py-1 bg-blue-600 rounded">
-          Ocean
-        </button>
-      </div>
+
 
       {/* Main Content */}
       <Navbar />
