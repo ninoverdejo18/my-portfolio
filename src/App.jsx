@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -143,6 +144,8 @@ function App() {
         <ChatBot />
 
       </main>
+
+      <Analytics />
 
     </div>
   );
