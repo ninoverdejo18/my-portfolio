@@ -294,7 +294,7 @@ cards.forEach(card => {
                 <div className="grid gap-5 md:grid-cols-2 md:gap-6">
 
                   <div>
-                    <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
+                    <label className="mb-3 block text-sm font-medium tracking-wide text-white/100">
                       Full Name
                     </label>
 
@@ -308,7 +308,7 @@ cards.forEach(card => {
                   </div>
 
                   <div>
-                    <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
+                    <label className="mb-3 block text-sm font-medium tracking-wide text-white/100">
                       Email Address
                     </label>
 
@@ -324,7 +324,7 @@ cards.forEach(card => {
                 </div>
 
                 <div>
-                  <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
+                  <label className="mb-3 block text-sm font-medium tracking-wide text-white/100">
                     Project Details
                   </label>
 
