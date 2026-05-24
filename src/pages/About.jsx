@@ -9,16 +9,164 @@ function About() {
         id="about"
         className="relative overflow-hidden bg-black py-16 text-white sm:py-20 lg:py-28"
       >
-        {/* Animated Background Glow */}
-        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
 
-        {/* Floating Orbs */}
+        {/* ================= PREMIUM BACKGROUND ================= */}
+
+        {/* MAIN TOP GLOW */}
+        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[400px] sm:w-[400px] lg:h-[550px] lg:w-[550px]" />
+
+        {/* LEFT GLOW */}
+        <motion.div
+          animate={{
+            y: [0, -40, 0],
+            x: [0, 20, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute -left-32 top-20 h-[420px] w-[420px] rounded-full bg-[#CDFF45]/10 blur-[120px]"
+        />
+
+        {/* RIGHT GLOW */}
+        <motion.div
+          animate={{
+            y: [0, 30, 0],
+            x: [0, -20, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute -right-32 bottom-10 h-[420px] w-[420px] rounded-full bg-[#CDFF45]/10 blur-[120px]"
+        />
+
+        {/* FLOATING ORBS */}
         <div className="absolute top-20 left-10 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
 
         <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
-        {/* Animated Grid */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px] animate-[gridMove_20s_linear_infinite]" />
+        {/* HORIZONTAL LINES */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute left-0 top-1/4 h-px w-full bg-gradient-to-r from-transparent via-[#CDFF45]/40 to-transparent" />
+
+          <div className="absolute left-0 top-2/4 h-px w-full bg-gradient-to-r from-transparent via-[#CDFF45]/20 to-transparent" />
+
+          <div className="absolute left-0 top-3/4 h-px w-full bg-gradient-to-r from-transparent via-[#CDFF45]/40 to-transparent" />
+        </div>
+
+        {/* MOVING CODE BACKGROUND */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.12]">
+
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute left-0 top-0 flex w-[200%]"
+          >
+
+            {/* FIRST BLOCK */}
+            <pre className="code-bg w-1/2">
+{`
+import React from "react";
+import { motion } from "framer-motion";
+
+function Portfolio() {
+  return (
+    <main className="modern-ui">
+      <HeroSection />
+      <Projects />
+      <Contact />
+    </main>
+  );
+}
+
+export default Portfolio;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+  });
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle(
+    "sticky",
+    window.scrollY > 50
+  );
+});
+`}
+            </pre>
+
+            {/* DUPLICATE BLOCK */}
+            <pre className="code-bg w-1/2">
+{`
+import React from "react";
+import { motion } from "framer-motion";
+
+function Portfolio() {
+  return (
+    <main className="modern-ui">
+      <HeroSection />
+      <Projects />
+      <Contact />
+    </main>
+  );
+}
+
+export default Portfolio;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+  });
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle(
+    "sticky",
+    window.scrollY > 50
+  );
+});
+`}
+            </pre>
+
+          </motion.div>
+        </div>
+
+        {/* FLOATING DOTS */}
+        <div className="absolute inset-0">
+          <div className="absolute left-[10%] top-[20%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
+
+          <div className="absolute left-[80%] top-[30%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
+
+          <div className="absolute left-[60%] top-[70%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
+
+          <div className="absolute left-[25%] top-[80%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
+        </div>
+
+        {/* ================= CONTENT ================= */}
 
         <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
@@ -55,7 +203,7 @@ function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-6 shadow-[0_0_60px_rgba(205,255,69,0.05)] backdrop-blur-xl sm:p-8 lg:rounded-[2.5rem] lg:p-10"
+              className="rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111]/90 to-black/90 p-6 shadow-[0_0_60px_rgba(205,255,69,0.05)] backdrop-blur-xl sm:p-8 lg:rounded-[2.5rem] lg:p-10"
             >
 
               {/* Badge */}
@@ -93,73 +241,42 @@ function About() {
 
               </div>
 
-              {/* Cards */}
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.15,
-                    },
-                  },
-                }}
-                className="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-10"
-              >
+              {/* Mission & Vision */}
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
 
-                {/* Goals */}
+                {/* Mission */}
                 <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="group rounded-2xl border border-[#CDFF45]/15 bg-black/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#CDFF45]/40 sm:rounded-3xl sm:p-6"
+                  whileHover={{ y: -5 }}
+                  className="rounded-2xl border border-[#CDFF45]/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all duration-300 hover:border-[#CDFF45]/30 hover:bg-white/[0.05]"
                 >
-
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#CDFF45]/10 text-lg text-[#CDFF45] sm:h-12 sm:w-12 sm:rounded-2xl sm:text-xl">
-                    ✦
-                  </div>
-
-                  <h3 className="mb-3 text-lg font-bold text-white sm:text-xl">
-                    My Goals
+                  <h3 className="mb-3 text-lg font-bold text-[#CDFF45]">
+                    Mission
                   </h3>
 
-                  <p className="text-sm leading-relaxed text-white/60">
-                    Continue growing through real-world projects,
-                    collaboration, and advanced front-end development.
+                  <p className="text-sm leading-relaxed text-white/65">
+                    To create modern, responsive, and user-friendly web
+                    experiences that combine creativity, performance,
+                    and functionality.
                   </p>
-
                 </motion.div>
 
                 {/* Vision */}
                 <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="group rounded-2xl border border-[#CDFF45]/15 bg-black/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#CDFF45]/40 sm:rounded-3xl sm:p-6"
+                  whileHover={{ y: -5 }}
+                  className="rounded-2xl border border-[#CDFF45]/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all duration-300 hover:border-[#CDFF45]/30 hover:bg-white/[0.05]"
                 >
-
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#CDFF45]/10 text-lg text-[#CDFF45] sm:h-12 sm:w-12 sm:rounded-2xl sm:text-xl">
-                    ⚡
-                  </div>
-
-                  <h3 className="mb-3 text-lg font-bold text-white sm:text-xl">
-                    My Vision
+                  <h3 className="mb-3 text-lg font-bold text-[#CDFF45]">
+                    Vision
                   </h3>
 
-                  <p className="text-sm leading-relaxed text-white/60">
-                    Build scalable, visually engaging, and impactful
-                    digital products that improve user experiences.
+                  <p className="text-sm leading-relaxed text-white/65">
+                    To become an innovative developer known for building
+                    impactful digital products that inspire and improve
+                    user experiences.
                   </p>
-
                 </motion.div>
 
-              </motion.div>
+              </div>
 
             </motion.div>
 
@@ -167,7 +284,7 @@ function About() {
 
         </div>
 
-        {/* Custom Animations */}
+        {/* CUSTOM ANIMATIONS */}
         <style>
           {`
             @keyframes jump {
@@ -188,17 +305,37 @@ function About() {
               }
             }
 
-            @keyframes gridMove {
-              0% {
-                transform: translateY(0px);
-              }
-              100% {
-                transform: translateY(50px);
-              }
-            }
-
             .about-badge {
               animation: jump 1.8s ease-in-out infinite;
+            }
+
+            .code-bg {
+              color: #CDFF45;
+              font-family: "Fira Code", monospace;
+              font-size: 16px;
+              line-height: 2.2;
+              white-space: pre;
+              padding: 80px;
+              min-width: 100%;
+
+              text-shadow:
+                0 0 10px rgba(205,255,69,0.25),
+                0 0 20px rgba(205,255,69,0.15);
+
+              background: linear-gradient(
+                to right,
+                transparent,
+                rgba(0,0,0,0.88),
+                transparent
+              );
+
+              mask-image: linear-gradient(
+                to bottom,
+                transparent,
+                white 20%,
+                white 80%,
+                transparent
+              );
             }
           `}
         </style>

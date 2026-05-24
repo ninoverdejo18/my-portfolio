@@ -7,21 +7,132 @@ function Hero() {
     <AnimatedSection>
       <section className="relative flex min-h-screen items-center overflow-hidden bg-black px-4 py-20 text-white sm:px-6 lg:px-8">
 
-        {/* Background Glow */}
-        <div className="absolute left-0 top-0 h-full w-full opacity-20">
+        {/* MAIN TOP GLOW */}
+        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[450px] sm:w-[450px] lg:h-[600px] lg:w-[600px]" />
 
-          <div className="absolute left-0 top-10 h-52 w-52 rounded-full bg-[#CDFF45] blur-3xl sm:left-10 sm:top-20 sm:h-72 sm:w-72 lg:h-80 lg:w-80" />
+        {/* SIDE LIGHTS */}
+        <div className="absolute left-0 top-0 h-full w-[300px] bg-gradient-to-r from-[#CDFF45]/10 to-transparent blur-3xl" />
 
-          <div className="absolute bottom-0 right-0 h-52 w-52 rounded-full bg-[#A3E635] blur-3xl sm:bottom-10 sm:right-10 sm:h-72 sm:w-72 lg:h-80 lg:w-80" />
+        <div className="absolute right-0 top-0 h-full w-[300px] bg-gradient-to-l from-[#A3E635]/10 to-transparent blur-3xl" />
 
+        {/* FLOATING ORBS */}
+        <div className="absolute left-10 top-20 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+
+        <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-[#A3E635]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
+
+        {/* MOVING CODE BACKGROUND */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.12]">
+
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 35,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute left-0 top-0 h-full w-[250%]"
+          >
+
+            {/* FIRST BLOCK */}
+            <pre className="code-bg absolute left-0 top-0 w-1/2">
+{`
+import React from "react";
+import { motion } from "framer-motion";
+
+function Portfolio() {
+  return (
+    <main className="portfolio">
+      <section className="hero">
+        <h1>Modern Web Experiences</h1>
+
+        <p>
+          Building responsive and interactive
+          interfaces with React.js and Tailwind CSS.
+        </p>
+
+        <button className="btn-primary">
+          Explore Projects
+        </button>
+      </section>
+    </main>
+  );
+}
+
+export default Portfolio;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+  });
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+  document.body.classList.toggle("menu-open");
+});
+`}
+            </pre>
+
+            {/* DUPLICATE */}
+            <pre className="code-bg absolute left-1/2 top-0 w-1/2">
+{`
+import React from "react";
+import { motion } from "framer-motion";
+
+function Portfolio() {
+  return (
+    <main className="portfolio">
+      <section className="hero">
+        <h1>Modern Web Experiences</h1>
+
+        <p>
+          Building responsive and interactive
+          interfaces with React.js and Tailwind CSS.
+        </p>
+
+        <button className="btn-primary">
+          Explore Projects
+        </button>
+      </section>
+    </main>
+  );
+}
+
+export default Portfolio;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+  });
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+  document.body.classList.toggle("menu-open");
+});
+`}
+            </pre>
+
+          </motion.div>
         </div>
-
-        {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px] sm:bg-[size:40px_40px]" />
 
         <div className="relative z-10 mx-auto max-w-7xl">
 
-          {/* Small Intro */}
+          {/* Intro */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -31,35 +142,18 @@ function Hero() {
             Front-End Developer • QA Tester • Graphic Designer
           </motion.p>
 
-          {/* Main Heading */}
+          {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Building{" "}
+            Building Modern <br />
 
-            {/* 🔥 ANIMATED WORD */}
-            <motion.span
-              animate={{
-                y: [0, -10, 0],
-                rotate: [0, 8, -8, 0],
-                scale: [1, 1.08, 1],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="inline-block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent"
-            >
-              Modern
-            </motion.span>
-
-            <br />
-
-            Web Experiences
+            <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
+              Web Experiences
+            </span>
           </motion.h1>
 
           {/* Description */}
@@ -67,7 +161,7 @@ function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg"
+            className="max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg"
           >
             Passionate Front-End Developer and QA Tester with experience
             creating responsive websites, interactive user interfaces,
@@ -86,18 +180,39 @@ function Hero() {
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:gap-8">
 
             <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 sm:px-6">
-              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">5</h3>
-              <p className="text-sm text-slate-400 sm:text-base">Web Projects</p>
+
+              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">
+                5
+              </h3>
+
+              <p className="text-sm text-slate-400 sm:text-base">
+                Web Projects
+              </p>
+
             </div>
 
             <div className="rounded-2xl border border-[#A3E635]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#A3E635]/40 hover:shadow-lg hover:shadow-[#A3E635]/10 sm:px-6">
-              <h3 className="text-2xl font-bold text-[#A3E635] sm:text-3xl">2+</h3>
-              <p className="text-sm text-slate-400 sm:text-base">Years Experience</p>
+
+              <h3 className="text-2xl font-bold text-[#A3E635] sm:text-3xl">
+                2+
+              </h3>
+
+              <p className="text-sm text-slate-400 sm:text-base">
+                Years Experience
+              </p>
+
             </div>
 
             <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 sm:px-6">
-              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">100%</h3>
-              <p className="text-sm text-slate-400 sm:text-base">Responsive Design</p>
+
+              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">
+                100%
+              </h3>
+
+              <p className="text-sm text-slate-400 sm:text-base">
+                Responsive Design
+              </p>
+
             </div>
 
           </div>
@@ -131,6 +246,44 @@ function Hero() {
           </div>
 
         </div>
+
+        {/* CUSTOM ANIMATIONS */}
+        <style>
+          {`
+            @keyframes float {
+              0%, 100% {
+                transform: translateY(0px) translateX(0px);
+              }
+
+              50% {
+                transform: translateY(-30px) translateX(10px);
+              }
+            }
+
+            .code-bg {
+              color: #CDFF45;
+              font-family: "Fira Code", monospace;
+              white-space: pre;
+
+              font-size: 15px;
+              line-height: 2.2;
+
+              min-width: 100%;
+              padding: 70px;
+
+              text-shadow:
+                0 0 10px rgba(205,255,69,0.25),
+                0 0 20px rgba(205,255,69,0.15);
+
+              background: linear-gradient(
+                to right,
+                transparent,
+                rgba(0,0,0,0.82),
+                transparent
+              );
+            }
+          `}
+        </style>
 
       </section>
     </AnimatedSection>

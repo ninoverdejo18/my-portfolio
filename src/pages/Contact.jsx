@@ -47,17 +47,132 @@ function Contact() {
         id="contact"
         className="relative overflow-hidden bg-black py-16 text-white sm:py-20 lg:py-28"
       >
+        {/* MAIN GLOW */}
+        <div className="absolute left-1/2 top-0 h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[450px] sm:w-[450px] lg:h-[550px] lg:w-[550px]" />
 
-        {/* Animated Background Effects */}
-        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
+        {/* SIDE LIGHTS */}
+        <div className="absolute left-0 top-0 h-full w-[300px] bg-gradient-to-r from-[#CDFF45]/10 to-transparent blur-3xl" />
 
-        {/* Floating Orbs */}
-        <div className="absolute top-20 left-10 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+        <div className="absolute right-0 top-0 h-full w-[300px] bg-gradient-to-l from-[#CDFF45]/10 to-transparent blur-3xl" />
+
+        {/* FLOATING ORBS */}
+        <div className="absolute left-10 top-20 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
 
         <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
-        {/* Animated Grid */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px] animate-[gridMove_20s_linear_infinite]" />
+        {/* MOVING CODE BACKGROUND */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.10]">
+
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 35,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute left-0 top-0 h-full w-[250%]"
+          >
+
+            {/* FIRST BLOCK */}
+            <pre className="code-bg absolute left-0 top-0 w-1/2">
+{`
+const sendEmail = async (e) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    await emailjs.sendForm(
+      "service_js1an7v",
+      "template_sym6wks",
+      form.current,
+      "PUBLIC_KEY"
+    );
+
+    setSuccess("Message sent.");
+  } catch (err) {
+    setError("Something went wrong.");
+  }
+};
+
+function Contact() {
+  return (
+    <section className="contact-section">
+      <div className="background-glow"></div>
+      <div className="floating-orbs"></div>
+
+      <form className="contact-form">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Project Details" />
+      </form>
+    </section>
+  );
+}
+
+export default Contact;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+});
+`}
+            </pre>
+
+            {/* DUPLICATE FOR LOOP */}
+            <pre className="code-bg absolute left-1/2 top-0 w-1/2">
+{`
+const sendEmail = async (e) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    await emailjs.sendForm(
+      "service_js1an7v",
+      "template_sym6wks",
+      form.current,
+      "PUBLIC_KEY"
+    );
+
+    setSuccess("Message sent.");
+  } catch (err) {
+    setError("Something went wrong.");
+  }
+};
+
+function Contact() {
+  return (
+    <section className="contact-section">
+      <div className="background-glow"></div>
+      <div className="floating-orbs"></div>
+
+      <form className="contact-form">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Project Details" />
+      </form>
+    </section>
+  );
+}
+
+export default Contact;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+});
+`}
+            </pre>
+
+          </motion.div>
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -70,7 +185,6 @@ function Contact() {
             className="mx-auto mb-14 max-w-3xl text-center sm:mb-16 lg:mb-20"
           >
 
-            {/* Animated Badge */}
             <span className="contact-badge mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45] shadow-[0_0_20px_rgba(205,255,69,0.35)] sm:mb-5 sm:px-5 sm:text-sm">
               CONTACT
             </span>
@@ -93,7 +207,7 @@ function Contact() {
           {/* Main Grid */}
           <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:gap-8">
 
-            {/* Left Professional Info */}
+            {/* Left Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -102,7 +216,6 @@ function Contact() {
               className="relative overflow-hidden rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111] to-black p-6 shadow-[0_0_60px_rgba(205,255,69,0.05)] sm:p-8 lg:rounded-[2.5rem]"
             >
 
-              {/* Glow */}
               <div className="absolute -left-16 top-10 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl sm:h-52 sm:w-52" />
 
               <div className="relative z-10">
@@ -120,7 +233,6 @@ function Contact() {
 
                 </div>
 
-                {/* Contact Cards */}
                 <div className="space-y-4 sm:space-y-5">
 
                   <div className="rounded-2xl border border-[#CDFF45]/10 bg-white/[0.03] p-5 transition duration-300 hover:border-[#CDFF45]/30 sm:rounded-3xl sm:p-6">
@@ -179,7 +291,6 @@ function Contact() {
                 className="grid gap-6 sm:gap-7"
               >
 
-                {/* Name & Email */}
                 <div className="grid gap-5 md:grid-cols-2 md:gap-6">
 
                   <div>
@@ -212,7 +323,6 @@ function Contact() {
 
                 </div>
 
-                {/* Message */}
                 <div>
                   <label className="mb-3 block text-sm font-medium tracking-wide text-white/70">
                     Project Details
@@ -227,7 +337,6 @@ function Contact() {
                   />
                 </div>
 
-                {/* Button */}
                 <button
                   type="submit"
                   disabled={loading}
@@ -246,14 +355,12 @@ function Contact() {
                   )}
                 </button>
 
-                {/* Success Message */}
                 {success && (
                   <div className="rounded-2xl border border-[#CDFF45]/20 bg-[#CDFF45]/10 px-5 py-4 text-sm font-medium text-[#CDFF45]">
                     {success}
                   </div>
                 )}
 
-                {/* Error Message */}
                 {error && (
                   <div className="rounded-2xl border border-red-500/20 bg-red-500/10 px-5 py-4 text-sm font-medium text-red-400">
                     {error}
@@ -268,7 +375,7 @@ function Contact() {
 
         </div>
 
-        {/* Custom Animations */}
+        {/* CUSTOM ANIMATIONS */}
         <style>
           {`
             @keyframes jump {
@@ -289,17 +396,31 @@ function Contact() {
               }
             }
 
-            @keyframes gridMove {
-              0% {
-                transform: translateY(0px);
-              }
-              100% {
-                transform: translateY(50px);
-              }
-            }
-
             .contact-badge {
               animation: jump 1.8s ease-in-out infinite;
+            }
+
+            .code-bg {
+              color: #CDFF45;
+              font-family: "Fira Code", monospace;
+              white-space: pre;
+
+              font-size: 15px;
+              line-height: 2.2;
+
+              min-width: 100%;
+              padding: 70px;
+
+              text-shadow:
+                0 0 10px rgba(205,255,69,0.25),
+                0 0 20px rgba(205,255,69,0.15);
+
+              background: linear-gradient(
+                to right,
+                transparent,
+                rgba(0,0,0,0.82),
+                transparent
+              );
             }
           `}
         </style>

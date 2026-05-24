@@ -75,16 +75,138 @@ function Projects() {
         className="relative overflow-hidden bg-black px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       >
 
-        {/* Animated Background Glow */}
-        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
+        {/* MAIN GLOW */}
+        <div className="absolute left-1/2 top-0 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[450px] sm:w-[450px] lg:h-[600px] lg:w-[600px]" />
 
-        {/* Floating Orbs */}
-        <div className="absolute top-20 left-10 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+        {/* SIDE LIGHTS */}
+        <div className="absolute left-0 top-0 h-full w-[280px] bg-gradient-to-r from-[#CDFF45]/10 to-transparent blur-3xl" />
+
+        <div className="absolute right-0 top-0 h-full w-[280px] bg-gradient-to-l from-[#CDFF45]/10 to-transparent blur-3xl" />
+
+        {/* FLOATING ORBS */}
+        <div className="absolute left-10 top-20 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
 
         <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
-        {/* Grid Overlay */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px] animate-[gridMove_20s_linear_infinite]" />
+        {/* MOVING CODE BACKGROUND */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.10]">
+
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 35,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute left-0 top-0 h-full w-[250%]"
+          >
+
+            {/* FIRST BLOCK */}
+            <pre className="code-bg absolute left-0 top-0 w-1/2">
+{`
+const projects = [
+  {
+    title: "Portfolio Website",
+    tech: ["React", "Tailwind", "Vite"],
+  },
+  {
+    title: "E-Commerce Website",
+    tech: ["Firebase", "React"],
+  },
+];
+
+function ProjectCard({ project }) {
+  return (
+    <div className="card">
+      <img src={project.image} />
+
+      <h2>{project.title}</h2>
+
+      <p>{project.description}</p>
+    </div>
+  );
+}
+
+export default function Projects() {
+  return (
+    <section className="projects-section">
+      <div className="background-glow"></div>
+
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const animateCards = () => {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.classList.add("active");
+    });
+  });
+};
+`}
+            </pre>
+
+            {/* DUPLICATE */}
+            <pre className="code-bg absolute left-1/2 top-0 w-1/2">
+{`
+const projects = [
+  {
+    title: "Portfolio Website",
+    tech: ["React", "Tailwind", "Vite"],
+  },
+  {
+    title: "E-Commerce Website",
+    tech: ["Firebase", "React"],
+  },
+];
+
+function ProjectCard({ project }) {
+  return (
+    <div className="card">
+      <img src={project.image} />
+
+      <h2>{project.title}</h2>
+
+      <p>{project.description}</p>
+    </div>
+  );
+}
+
+export default function Projects() {
+  return (
+    <section className="projects-section">
+      <div className="background-glow"></div>
+
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const animateCards = () => {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.classList.add("active");
+    });
+  });
+};
+`}
+            </pre>
+
+          </motion.div>
+        </div>
 
         <div className="relative z-10 mx-auto max-w-7xl">
 
@@ -185,7 +307,7 @@ function Projects() {
 
         </div>
 
-        {/* Custom Animations */}
+        {/* CUSTOM ANIMATIONS */}
         <style>
           {`
             @keyframes jump {
@@ -206,17 +328,31 @@ function Projects() {
               }
             }
 
-            @keyframes gridMove {
-              0% {
-                transform: translateY(0px);
-              }
-              100% {
-                transform: translateY(50px);
-              }
-            }
-
             .projects-badge {
               animation: jump 1.8s ease-in-out infinite;
+            }
+
+            .code-bg {
+              color: #CDFF45;
+              font-family: "Fira Code", monospace;
+              white-space: pre;
+
+              font-size: 15px;
+              line-height: 2.1;
+
+              min-width: 100%;
+              padding: 70px;
+
+              text-shadow:
+                0 0 10px rgba(205,255,69,0.25),
+                0 0 20px rgba(205,255,69,0.15);
+
+              background: linear-gradient(
+                to right,
+                transparent,
+                rgba(0,0,0,0.82),
+                transparent
+              );
             }
           `}
         </style>
