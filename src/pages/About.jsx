@@ -39,8 +39,8 @@ function About() {
             {/* Right Side */}
             <div className="rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-br from-[#111] to-black p-6 shadow-[0_0_60px_rgba(205,255,69,0.06)] backdrop-blur-xl sm:p-8 lg:rounded-[2.5rem] lg:p-10">
 
-              {/* Small Label */}
-              <span className="mb-4 inline-block rounded-full border border-[#CDFF45]/30 px-3 py-1 text-xs tracking-[0.2em] text-[#CDFF45] sm:px-4 sm:text-sm">
+              {/* Animated Small Label */}
+              <span className="about-badge mb-4 inline-block rounded-full border border-[#CDFF45]/30 bg-[#CDFF45]/5 px-3 py-1 text-xs tracking-[0.2em] text-[#CDFF45] shadow-[0_0_20px_rgba(205,255,69,0.35)] sm:px-4 sm:text-sm">
                 ABOUT ME
               </span>
 
@@ -71,8 +71,6 @@ function About() {
                   I combine creativity, communication, and technical thinking
                   to build meaningful digital products.
                 </p>
-
-      
 
               </div>
 
@@ -121,6 +119,25 @@ function About() {
 
           </div>
         </div>
+
+        {/* Animation */}
+        <style>
+          {`
+            @keyframes jump {
+              0%, 100% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-10px);
+              }
+            }
+
+            .about-badge {
+              animation: jump 1.8s ease-in-out infinite;
+            }
+          `}
+        </style>
+
       </section>
     </AnimatedSection>
   );

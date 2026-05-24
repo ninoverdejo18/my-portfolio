@@ -38,11 +38,28 @@ function Hero() {
             transition={{ duration: 0.8 }}
             className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Building Modern <br />
+            Building{" "}
 
-            <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
-              Web Experiences
-            </span>
+            {/* 🔥 ANIMATED WORD */}
+            <motion.span
+              animate={{
+                y: [0, -10, 0],
+                rotate: [0, 8, -8, 0],
+                scale: [1, 1.08, 1],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="inline-block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent"
+            >
+              Modern
+            </motion.span>
+
+            <br />
+
+            Web Experiences
           </motion.h1>
 
           {/* Description */}
@@ -69,39 +86,18 @@ function Hero() {
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:gap-8">
 
             <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 sm:px-6">
-
-              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">
-                5
-              </h3>
-
-              <p className="text-sm text-slate-400 sm:text-base">
-                Web Projects
-              </p>
-
+              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">5</h3>
+              <p className="text-sm text-slate-400 sm:text-base">Web Projects</p>
             </div>
 
             <div className="rounded-2xl border border-[#A3E635]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#A3E635]/40 hover:shadow-lg hover:shadow-[#A3E635]/10 sm:px-6">
-
-              <h3 className="text-2xl font-bold text-[#A3E635] sm:text-3xl">
-                2+
-              </h3>
-
-              <p className="text-sm text-slate-400 sm:text-base">
-                Years Experience
-              </p>
-
+              <h3 className="text-2xl font-bold text-[#A3E635] sm:text-3xl">2+</h3>
+              <p className="text-sm text-slate-400 sm:text-base">Years Experience</p>
             </div>
 
             <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 sm:px-6">
-
-              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">
-                100%
-              </h3>
-
-              <p className="text-sm text-slate-400 sm:text-base">
-                Responsive Design
-              </p>
-
+              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">100%</h3>
+              <p className="text-sm text-slate-400 sm:text-base">Responsive Design</p>
             </div>
 
           </div>
@@ -109,7 +105,6 @@ function Hero() {
           {/* Buttons */}
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
 
-            {/* Projects */}
             <Link
               to="/projects"
               className="rounded-xl bg-gradient-to-r from-[#CDFF45] to-[#A3E635] px-6 py-3 text-center font-semibold text-black shadow-lg shadow-[#CDFF45]/10 transition duration-300 hover:scale-105"
@@ -117,7 +112,6 @@ function Hero() {
               View Projects
             </Link>
 
-            {/* Contact */}
             <Link
               to="/contact"
               className="rounded-xl border border-[#CDFF45]/30 px-6 py-3 text-center transition duration-300 hover:border-[#CDFF45] hover:bg-[#CDFF45]/10"
@@ -125,7 +119,6 @@ function Hero() {
               Contact Me
             </Link>
 
-            {/* Resume */}
             <a
               href="/Nino Verdejo.pdf"
               target="_blank"
