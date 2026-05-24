@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-[#CDFF45]/10 bg-black/80 text-white backdrop-blur-md">
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-4 sm:px-4 lg:px-8">
 
         {/* Logo */}
         <Link to="/" className="z-50 flex items-center">
