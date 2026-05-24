@@ -51,7 +51,7 @@ function Skills() {
         <div className="absolute inset-0 overflow-hidden">
 
           {/* MAIN GLOW (reduced) */}
-          <div className="absolute left-1/2 top-0 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-[#CDFF45]/5 blur-3xl animate-pulse sm:h-[350px] sm:w-[350px] lg:h-[450px] lg:w-[450px]" />
+          <div className="absolute left-1/2 top-0 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[350px] sm:w-[350px] lg:h-[450px] lg:w-[450px]" />
 
           {/* SIDE LIGHTS (reduced) */}
           <div className="absolute left-0 top-0 h-full w-[200px] bg-gradient-to-r from-[#CDFF45]/5 to-transparent blur-3xl" />
@@ -59,9 +59,9 @@ function Skills() {
           <div className="absolute right-0 top-0 h-full w-[200px] bg-gradient-to-l from-[#CDFF45]/5 to-transparent blur-3xl" />
 
           {/* FLOATING ORBS (reduced) */}
-          <div className="absolute left-10 top-20 h-32 w-32 rounded-full bg-[#CDFF45]/5 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+          <div className="absolute left-10 top-20 h-32 w-32 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
 
-          <div className="absolute bottom-20 right-10 h-40 w-40 rounded-full bg-[#A3E635]/5 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
+          <div className="absolute bottom-20 right-10 h-40 w-40 rounded-full bg-[#A3E635]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
           {/* RADIAL FADE (reduced) */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(205,255,69,0.06),transparent_70%)]" />
@@ -82,7 +82,7 @@ function Skills() {
             viewport={{ once: true }}
             className="mx-auto mb-14 max-w-3xl text-center sm:mb-16 lg:mb-20"
           >
-            <span className="skills-badge mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45]">
+            <span className="projects-badge mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45] shadow-[0_0_20px_rgba(205,255,69,0.35)] sm:px-5 sm:text-sm">
               MY EXPERTISE
             </span>
 
@@ -114,12 +114,12 @@ function Skills() {
                 whileHover={{ y: -8 }}
                 className="group relative overflow-hidden rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111]/95 to-black/95 p-6 shadow-[0_0_45px_rgba(205,255,69,0.04)] backdrop-blur-xl transition duration-500 hover:border-[#CDFF45]/40 hover:shadow-[0_0_60px_rgba(205,255,69,0.08)] sm:p-7"
               >
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#CDFF45]/5 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
+                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#CDFF45]/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                 <div className="relative z-10">
 
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#CDFF45]/15 bg-[#CDFF45]/5 text-2xl">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#CDFF45]/15 bg-[#CDFF45]/10 text-2xl">
                       {skill.icon}
                     </div>
 
