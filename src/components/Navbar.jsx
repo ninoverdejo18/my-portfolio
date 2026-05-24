@@ -23,50 +23,20 @@ function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex md:items-center md:gap-4 lg:gap-5">
 
-          <li>
-            <Link
-              to="/"
-              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
-            >
-              Home
-            </Link>
-          </li>
+          {["/", "/about", "/skills", "/projects", "/contact"].map((path, i) => {
+            const labels = ["Home", "About", "Skills", "Projects", "Contact"];
 
-          <li>
-            <Link
-              to="/about"
-              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
-            >
-              About
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/skills"
-              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
-            >
-              Skills
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/projects"
-              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
-            >
-              Projects
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/contact"
-              className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
-            >
-              Contact
-            </Link>
-          </li>
+            return (
+              <li key={i}>
+                <Link
+                  to={path}
+                  className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+                >
+                  {labels[i]}
+                </Link>
+              </li>
+            );
+          })}
 
         </ul>
 
@@ -86,18 +56,18 @@ function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`overflow-hidden border-t border-[#CDFF45]/10 bg-black/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
-          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden bg-black/95 backdrop-blur-xl transition-all duration-300
+        border-x border-b border-[#CDFF45]/10
+        ${isOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"}`}
       >
 
-        <ul className="flex flex-col gap-1 px-4 py-4">
+        <ul className="flex flex-col divide-y divide-[#CDFF45]/10 px-4 py-3">
 
           <li>
             <Link
               to="/"
               onClick={() => setIsOpen(false)}
-              className="block rounded-xl px-4 py-3 transition duration-300 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+              className="block px-4 py-3 transition hover:text-[#CDFF45]"
             >
               Home
             </Link>
@@ -107,7 +77,7 @@ function Navbar() {
             <Link
               to="/about"
               onClick={() => setIsOpen(false)}
-              className="block rounded-xl px-4 py-3 transition duration-300 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+              className="block px-4 py-3 transition hover:text-[#CDFF45]"
             >
               About
             </Link>
@@ -117,7 +87,7 @@ function Navbar() {
             <Link
               to="/skills"
               onClick={() => setIsOpen(false)}
-              className="block rounded-xl px-4 py-3 transition duration-300 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+              className="block px-4 py-3 transition hover:text-[#CDFF45]"
             >
               Skills
             </Link>
@@ -127,7 +97,7 @@ function Navbar() {
             <Link
               to="/projects"
               onClick={() => setIsOpen(false)}
-              className="block rounded-xl px-4 py-3 transition duration-300 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+              className="block px-4 py-3 transition hover:text-[#CDFF45]"
             >
               Projects
             </Link>
@@ -137,14 +107,13 @@ function Navbar() {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="block rounded-xl bg-[#CDFF45] px-4 py-3 text-center font-semibold text-black transition duration-300 hover:bg-[#bdfc24]"
+              className="block rounded-xl bg-[#CDFF45] px-4 py-3 text-center font-semibold text-black transition hover:bg-[#bdfc24]"
             >
               Contact
             </Link>
           </li>
 
         </ul>
-
       </div>
 
     </nav>
