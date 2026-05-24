@@ -322,12 +322,7 @@ window.addEventListener("scroll", () => {
                 0 0 10px rgba(205,255,69,0.25),
                 0 0 20px rgba(205,255,69,0.15);
 
-              background: linear-gradient(
-                to right,
-                transparent,
-                rgba(0,0,0,0.88),
-                transparent
-              );
+              background: transparent;
 
               mask-image: linear-gradient(
                 to bottom,
