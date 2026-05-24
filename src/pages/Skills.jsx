@@ -25,89 +25,20 @@ const itemVariants = {
 
 function Skills() {
   const skills = [
-    {
-      title: "HTML",
-      description: "Building clean and structured web page layouts.",
-      icon: "🌐",
-    },
-    {
-      title: "CSS",
-      description:
-        "Creating modern, responsive, and visually appealing designs.",
-      icon: "🎨",
-    },
-    {
-      title: "JavaScript",
-      description:
-        "Adding interactivity and dynamic functionality to websites.",
-      icon: "⚡",
-    },
-    {
-      title: "React.js",
-      description:
-        "Developing fast and reusable user interface components.",
-      icon: "⚛️",
-    },
-    {
-      title: "Tailwind CSS",
-      description:
-        "Designing responsive websites efficiently using utility classes.",
-      icon: "💨",
-    },
-    {
-      title: "Git",
-      description:
-        "Managing project versions and tracking code changes.",
-      icon: "🔧",
-    },
-    {
-      title: "GitHub",
-      description:
-        "Collaborating, storing, and deploying development projects.",
-      icon: "🐙",
-    },
-    {
-      title: "Responsive Design",
-      description:
-        "Ensuring websites work smoothly across all screen sizes.",
-      icon: "📱",
-    },
-    {
-      title: "UI/UX",
-      description:
-        "Designing user-friendly and visually engaging experiences.",
-      icon: "✨",
-    },
-    {
-      title: "Graphic Design",
-      description:
-        "Creating digital graphics, layouts, and branding materials.",
-      icon: "🖌️",
-    },
-    {
-      title: "QA Testing",
-      description:
-        "Testing websites and applications to improve quality.",
-      icon: "🧪",
-    },
-    {
-      title: "EmailJS",
-      description:
-        "Integrating real-time email functionality into forms.",
-      icon: "📩",
-    },
-    {
-      title: "Vercel",
-      description:
-        "Deploying and hosting modern React applications.",
-      icon: "🚀",
-    },
-    {
-      title: "Customer Service",
-      description:
-        "Providing professional communication and support.",
-      icon: "🤝",
-    },
+    { title: "HTML", description: "Building clean and structured web page layouts.", icon: "🌐" },
+    { title: "CSS", description: "Creating modern, responsive, and visually appealing designs.", icon: "🎨" },
+    { title: "JavaScript", description: "Adding interactivity and dynamic functionality to websites.", icon: "⚡" },
+    { title: "React.js", description: "Developing fast and reusable user interface components.", icon: "⚛️" },
+    { title: "Tailwind CSS", description: "Designing responsive websites efficiently using utility classes.", icon: "💨" },
+    { title: "Git", description: "Managing project versions and tracking code changes.", icon: "🔧" },
+    { title: "GitHub", description: "Collaborating, storing, and deploying development projects.", icon: "🐙" },
+    { title: "Responsive Design", description: "Ensuring websites work smoothly across all screen sizes.", icon: "📱" },
+    { title: "UI/UX", description: "Designing user-friendly and visually engaging experiences.", icon: "✨" },
+    { title: "Graphic Design", description: "Creating digital graphics, layouts, and branding materials.", icon: "🖌️" },
+    { title: "QA Testing", description: "Testing websites and applications to improve quality.", icon: "🧪" },
+    { title: "EmailJS", description: "Integrating real-time email functionality into forms.", icon: "📩" },
+    { title: "Vercel", description: "Deploying and hosting modern React applications.", icon: "🚀" },
+    { title: "Customer Service", description: "Providing professional communication and support.", icon: "🤝" },
   ];
 
   return (
@@ -119,152 +50,21 @@ function Skills() {
         {/* ================= BACKGROUND EFFECTS ================= */}
         <div className="absolute inset-0 overflow-hidden">
 
-          {/* MAIN GLOW */}
-          <div className="absolute left-1/2 top-0 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-[#CDFF45]/10 blur-3xl animate-pulse sm:h-[450px] sm:w-[450px] lg:h-[600px] lg:w-[600px]" />
+          {/* MAIN GLOW (reduced) */}
+          <div className="absolute left-1/2 top-0 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-[#CDFF45]/5 blur-3xl animate-pulse sm:h-[350px] sm:w-[350px] lg:h-[450px] lg:w-[450px]" />
 
-          {/* SIDE LIGHTS */}
-          <div className="absolute left-0 top-0 h-full w-[280px] bg-gradient-to-r from-[#CDFF45]/10 to-transparent blur-3xl" />
+          {/* SIDE LIGHTS (reduced) */}
+          <div className="absolute left-0 top-0 h-full w-[200px] bg-gradient-to-r from-[#CDFF45]/5 to-transparent blur-3xl" />
 
-          <div className="absolute right-0 top-0 h-full w-[280px] bg-gradient-to-l from-[#CDFF45]/10 to-transparent blur-3xl" />
+          <div className="absolute right-0 top-0 h-full w-[200px] bg-gradient-to-l from-[#CDFF45]/5 to-transparent blur-3xl" />
 
-          {/* FLOATING ORBS */}
-          <div className="absolute left-10 top-20 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+          {/* FLOATING ORBS (reduced) */}
+          <div className="absolute left-10 top-20 h-32 w-32 rounded-full bg-[#CDFF45]/5 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
 
-          <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-[#A3E635]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
+          <div className="absolute bottom-20 right-10 h-40 w-40 rounded-full bg-[#A3E635]/5 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
-          {/* MOVING CODE BACKGROUND */}
-          <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.10]">
-
-            <motion.div
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                duration: 35,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute left-0 top-0 h-full w-[250%]"
-            >
-
-              {/* FIRST BLOCK */}
-              <pre className="code-bg absolute left-0 top-0 w-1/2">
-{`
-const skills = [
-  {
-    title: "React.js",
-    icon: "⚛️",
-  },
-  {
-    title: "Tailwind CSS",
-    icon: "💨",
-  },
-  {
-    title: "JavaScript",
-    icon: "⚡",
-  },
-];
-
-function SkillCard({ skill }) {
-  return (
-    <div className="skill-card">
-      <span>{skill.icon}</span>
-
-      <h2>{skill.title}</h2>
-
-      <p>{skill.description}</p>
-    </div>
-  );
-}
-
-export default function Skills() {
-  return (
-    <section className="skills-section">
-      <div className="background-glow"></div>
-
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <SkillCard skill={skill} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-const animateCards = () => {
-  const cards = document.querySelectorAll(".skill-card");
-
-  cards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      card.classList.add("active");
-    });
-  });
-};
-`}
-              </pre>
-
-              {/* DUPLICATE */}
-              <pre className="code-bg absolute left-1/2 top-0 w-1/2">
-{`
-const skills = [
-  {
-    title: "React.js",
-    icon: "⚛️",
-  },
-  {
-    title: "Tailwind CSS",
-    icon: "💨",
-  },
-  {
-    title: "JavaScript",
-    icon: "⚡",
-  },
-];
-
-function SkillCard({ skill }) {
-  return (
-    <div className="skill-card">
-      <span>{skill.icon}</span>
-
-      <h2>{skill.title}</h2>
-
-      <p>{skill.description}</p>
-    </div>
-  );
-}
-
-export default function Skills() {
-  return (
-    <section className="skills-section">
-      <div className="background-glow"></div>
-
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <SkillCard skill={skill} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-const animateCards = () => {
-  const cards = document.querySelectorAll(".skill-card");
-
-  cards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      card.classList.add("active");
-    });
-  });
-};
-`}
-              </pre>
-
-            </motion.div>
-          </div>
-
-          {/* GRID OVERLAY */}
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(205,255,69,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(205,255,69,0.04)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px]" />
-
-          {/* RADIAL FADE */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(205,255,69,0.12),transparent_65%)]" />
+          {/* RADIAL FADE (reduced) */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(205,255,69,0.06),transparent_70%)]" />
 
           {/* NOISE */}
           <div className="absolute inset-0 opacity-[0.03] mix-blend-soft-light bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]" />
@@ -282,13 +82,10 @@ const animateCards = () => {
             viewport={{ once: true }}
             className="mx-auto mb-14 max-w-3xl text-center sm:mb-16 lg:mb-20"
           >
-
-            {/* Badge */}
-            <span className="skills-badge mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45] shadow-[0_0_25px_rgba(205,255,69,0.3)] backdrop-blur-xl sm:px-5 sm:text-sm">
+            <span className="skills-badge mb-4 inline-flex rounded-full border border-[#CDFF45]/20 bg-[#CDFF45]/5 px-4 py-2 text-xs tracking-[0.2em] text-[#CDFF45]">
               MY EXPERTISE
             </span>
 
-            {/* Title */}
             <h2 className="mb-5 text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
               Technologies &
               <span className="block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
@@ -296,13 +93,10 @@ const animateCards = () => {
               </span>
             </h2>
 
-            {/* Description */}
             <p className="text-base leading-relaxed text-white/60 sm:text-lg">
-              A collection of modern technologies, development tools,
-              and creative skills I use to craft responsive,
+              A collection of modern technologies, development tools, and creative skills I use to craft responsive,
               high-performance, and visually engaging web applications.
             </p>
-
           </motion.div>
 
           {/* SKILLS GRID */}
@@ -313,7 +107,6 @@ const animateCards = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -321,101 +114,52 @@ const animateCards = () => {
                 whileHover={{ y: -8 }}
                 className="group relative overflow-hidden rounded-[2rem] border border-[#CDFF45]/10 bg-gradient-to-b from-[#111]/95 to-black/95 p-6 shadow-[0_0_45px_rgba(205,255,69,0.04)] backdrop-blur-xl transition duration-500 hover:border-[#CDFF45]/40 hover:shadow-[0_0_60px_rgba(205,255,69,0.08)] sm:p-7"
               >
-
-                {/* Hover Glow */}
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#CDFF45]/10 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
-
-                {/* Gradient Border */}
-                <div className="absolute inset-0 rounded-[2rem] border border-transparent bg-gradient-to-b from-[#CDFF45]/10 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#CDFF45]/5 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
 
                 <div className="relative z-10">
 
-                  {/* Top */}
                   <div className="mb-6 flex items-center justify-between">
-
-                    {/* Icon */}
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#CDFF45]/15 bg-[#CDFF45]/5 text-2xl backdrop-blur-xl transition duration-300 group-hover:scale-110 group-hover:border-[#CDFF45]/30">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#CDFF45]/15 bg-[#CDFF45]/5 text-2xl">
                       {skill.icon}
                     </div>
 
-                    {/* Number */}
                     <span className="text-xs font-semibold tracking-widest text-white/20">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-
                   </div>
 
-                  {/* Title */}
-                  <h3 className="mb-4 text-2xl font-bold text-white transition duration-300 group-hover:text-[#CDFF45]">
+                  <h3 className="mb-4 text-2xl font-bold text-white group-hover:text-[#CDFF45]">
                     {skill.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-sm leading-relaxed text-white/60 sm:text-[15px]">
+                  <p className="text-sm leading-relaxed text-white/60">
                     {skill.description}
                   </p>
 
-                  {/* Bottom Accent */}
                   <div className="mt-6 h-[2px] w-14 rounded-full bg-[#CDFF45] transition-all duration-500 group-hover:w-28" />
-
                 </div>
-
               </motion.div>
             ))}
-
           </motion.div>
 
         </div>
 
         {/* ================= CUSTOM ANIMATIONS ================= */}
-        <style>
-          {`
-            @keyframes jump {
-              0%, 100% {
-                transform: translateY(0);
-              }
-              50% {
-                transform: translateY(-10px);
-              }
-            }
+        <style>{`
+          @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
 
-            @keyframes float {
-              0%, 100% {
-                transform: translateY(0px) translateX(0px);
-              }
-              50% {
-                transform: translateY(-30px) translateX(10px);
-              }
-            }
+          @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-30px) translateX(10px); }
+          }
 
-            .skills-badge {
-              animation: jump 1.8s ease-in-out infinite;
-            }
-
-            .code-bg {
-              color: #CDFF45;
-              font-family: "Fira Code", monospace;
-              white-space: pre;
-
-              font-size: 15px;
-              line-height: 2.1;
-
-              min-width: 100%;
-              padding: 70px;
-
-              text-shadow:
-                0 0 10px rgba(205,255,69,0.25),
-                0 0 20px rgba(205,255,69,0.15);
-
-              background: linear-gradient(
-                to right,
-                transparent,
-                rgba(0,0,0,0.82),
-                transparent
-              );
-            }
-          `}
-        </style>
+          .skills-badge {
+            animation: jump 1.8s ease-in-out infinite;
+          }
+        `}</style>
 
       </section>
     </AnimatedSection>
