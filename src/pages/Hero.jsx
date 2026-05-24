@@ -59,24 +59,6 @@ function Portfolio() {
 }
 
 export default Portfolio;
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.classList.add("active");
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.classList.remove("active");
-  });
-});
-
-const menuToggle = document.querySelector(".menu-toggle");
-
-menuToggle.addEventListener("click", () => {
-  document.body.classList.toggle("menu-open");
-});
 `}
             </pre>
 
@@ -106,24 +88,6 @@ function Portfolio() {
 }
 
 export default Portfolio;
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.classList.add("active");
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.classList.remove("active");
-  });
-});
-
-const menuToggle = document.querySelector(".menu-toggle");
-
-menuToggle.addEventListener("click", () => {
-  document.body.classList.toggle("menu-open");
-});
 `}
             </pre>
 
@@ -149,7 +113,25 @@ menuToggle.addEventListener("click", () => {
             transition={{ duration: 0.8 }}
             className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Building Modern <br />
+            Building{" "}
+
+            <motion.span
+              animate={{
+                y: [0, -18, 0],
+                rotate: [0, -10, 10, 0],
+                scale: [1, 1.08, 1],
+              }}
+              transition={{
+                duration: 1.6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="inline-block bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent"
+            >
+              Modern
+            </motion.span>
+
+            <br />
 
             <span className="bg-gradient-to-r from-[#CDFF45] via-white to-[#A3E635] bg-clip-text text-transparent">
               Web Experiences
@@ -180,39 +162,18 @@ menuToggle.addEventListener("click", () => {
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex lg:flex-wrap lg:gap-8">
 
             <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 sm:px-6">
-
-              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">
-                5
-              </h3>
-
-              <p className="text-sm text-slate-400 sm:text-base">
-                Web Projects
-              </p>
-
+              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">5</h3>
+              <p className="text-sm text-slate-400 sm:text-base">Web Projects</p>
             </div>
 
             <div className="rounded-2xl border border-[#A3E635]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#A3E635]/40 hover:shadow-lg hover:shadow-[#A3E635]/10 sm:px-6">
-
-              <h3 className="text-2xl font-bold text-[#A3E635] sm:text-3xl">
-                2+
-              </h3>
-
-              <p className="text-sm text-slate-400 sm:text-base">
-                Years Experience
-              </p>
-
+              <h3 className="text-2xl font-bold text-[#A3E635] sm:text-3xl">2+</h3>
+              <p className="text-sm text-slate-400 sm:text-base">Years Experience</p>
             </div>
 
             <div className="rounded-2xl border border-[#CDFF45]/20 bg-black/60 px-5 py-4 backdrop-blur-lg transition duration-300 hover:border-[#CDFF45]/40 hover:shadow-lg hover:shadow-[#CDFF45]/10 sm:px-6">
-
-              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">
-                100%
-              </h3>
-
-              <p className="text-sm text-slate-400 sm:text-base">
-                Responsive Design
-              </p>
-
+              <h3 className="text-2xl font-bold text-[#CDFF45] sm:text-3xl">100%</h3>
+              <p className="text-sm text-slate-400 sm:text-base">Responsive Design</p>
             </div>
 
           </div>
@@ -254,7 +215,6 @@ menuToggle.addEventListener("click", () => {
               0%, 100% {
                 transform: translateY(0px) translateX(0px);
               }
-
               50% {
                 transform: translateY(-30px) translateX(10px);
               }
@@ -264,17 +224,13 @@ menuToggle.addEventListener("click", () => {
               color: #CDFF45;
               font-family: "Fira Code", monospace;
               white-space: pre;
-
               font-size: 15px;
               line-height: 2.2;
-
               min-width: 100%;
               padding: 70px;
-
               text-shadow:
                 0 0 10px rgba(205,255,69,0.25),
                 0 0 20px rgba(205,255,69,0.15);
-
               background: linear-gradient(
                 to right,
                 transparent,
