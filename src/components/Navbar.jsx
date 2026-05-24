@@ -6,6 +6,14 @@ import logo from "../assets/logo.png";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navItems = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/skills", label: "Skills" },
+    { path: "/projects", label: "Projects" },
+    { path: "/contact", label: "Contact" },
+  ];
+
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-[#CDFF45]/10 bg-black/80 text-white backdrop-blur-md">
 
@@ -22,28 +30,22 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex md:items-center md:gap-4 lg:gap-5">
-
-          {["/", "/about", "/skills", "/projects", "/contact"].map((path, i) => {
-            const labels = ["Home", "About", "Skills", "Projects", "Contact"];
-
-            return (
-              <li key={i}>
-                <Link
-                  to={path}
-                  className="rounded-xl border border-[#CDFF45]/20 px-5 py-2.5 text-sm transition duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
-                >
-                  {labels[i]}
-                </Link>
-              </li>
-            );
-          })}
-
+          {navItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                className="rounded-xl border border-[#CDFF45]/20 bg-black/40 px-5 py-2.5 text-sm transition-all duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="rounded-lg border border-[#CDFF45]/20 p-2 transition duration-300 hover:border-[#CDFF45]/50 md:hidden"
+          className="rounded-xl border border-[#CDFF45]/20 bg-black/40 p-2 transition duration-300 hover:border-[#CDFF45]/50 md:hidden"
         >
           {isOpen ? (
             <X size={22} className="text-[#CDFF45]" />
@@ -56,62 +58,23 @@ function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden overflow-hidden bg-black/95 backdrop-blur-xl transition-all duration-300
-        border-x border-b border-[#CDFF45]/10
-        ${isOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"}`}
+        className={`md:hidden overflow-hidden bg-black/95 backdrop-blur-xl transition-all duration-300 border-b border-[#CDFF45]/10 ${
+          isOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
+        <ul className="flex flex-col gap-2 px-4 py-4">
 
-        <ul className="flex flex-col divide-y divide-[#CDFF45]/10 px-4 py-3">
-
-          <li>
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 transition hover:text-[#CDFF45]"
-            >
-              Home
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/about"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 transition hover:text-[#CDFF45]"
-            >
-              About
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/skills"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 transition hover:text-[#CDFF45]"
-            >
-              Skills
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/projects"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 transition hover:text-[#CDFF45]"
-            >
-              Projects
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block rounded-xl bg-[#CDFF45] px-4 py-3 text-center font-semibold text-black transition hover:bg-[#bdfc24]"
-            >
-              Contact
-            </Link>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className="block rounded-xl border border-[#CDFF45]/20 bg-black/40 px-4 py-3 text-sm transition-all duration-300 hover:border-[#CDFF45]/50 hover:bg-[#CDFF45]/10 hover:text-[#CDFF45]"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
 
         </ul>
       </div>
