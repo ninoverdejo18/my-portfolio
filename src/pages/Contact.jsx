@@ -7,7 +7,6 @@ emailjs.init("Um40NagmPxC9YUZAO");
 
 function Contact() {
   const form = useRef();
-
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
@@ -290,7 +289,11 @@ cards.forEach(card => {
                 onSubmit={sendEmail}
                 className="grid gap-6 sm:gap-7"
               >
-
+                <input
+                type="hidden"
+                name="to_email"
+                value="ninoverdejo@gmail.com"
+                />
                 <div className="grid gap-5 md:grid-cols-2 md:gap-6">
 
                   <div>
