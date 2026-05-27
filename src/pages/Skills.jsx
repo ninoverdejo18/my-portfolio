@@ -51,36 +51,104 @@ function Skills() {
         <div className="absolute left-10 top-20 h-40 w-40 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_8s_ease-in-out_infinite]" />
         <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-[#CDFF45]/10 blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
-        {/* MOVING CODE BACKGROUND */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.10]">
+         {/* MOVING CODE BACKGROUND */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.12]">
+
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-            className="absolute left-0 top-0 h-full w-[250%]"
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute left-0 top-0 flex w-[200%]"
           >
-            <pre className="code-bg absolute left-0 top-0 w-1/2">
-{`
-const skills = ["HTML", "CSS", "JS", "React"];
 
-function SkillCard() {
-  return <div className="card" />;
-}
-`}
-            </pre>
-
-            <pre className="code-bg absolute left-1/2 top-0 w-1/2">
+            {/* FIRST BLOCK */}
+            <pre className="code-bg w-1/2">
 {`
-export default function Skills() {
+import React from "react";
+import { motion } from "framer-motion";
+
+function Portfolio() {
   return (
-    <section className="skills">
-      <div className="grid" />
-    </section>
+    <main className="modern-ui">
+      <HeroSection />
+      <Projects />
+      <Contact />
+    </main>
   );
 }
+
+export default Portfolio;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+  });
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle(
+    "sticky",
+    window.scrollY > 50
+  );
+});
 `}
             </pre>
+
+            {/* DUPLICATE BLOCK */}
+            <pre className="code-bg w-1/2">
+{`
+import React from "react";
+import { motion } from "framer-motion";
+
+function Portfolio() {
+  return (
+    <main className="modern-ui">
+      <HeroSection />
+      <Projects />
+      <Contact />
+    </main>
+  );
+}
+
+export default Portfolio;
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("active");
+  });
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle(
+    "sticky",
+    window.scrollY > 50
+  );
+});
+`}
+            </pre>
+
           </motion.div>
         </div>
+
 
         {/* CONTENT */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

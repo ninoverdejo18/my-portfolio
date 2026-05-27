@@ -155,16 +155,6 @@ window.addEventListener("scroll", () => {
           </motion.div>
         </div>
 
-        {/* FLOATING DOTS */}
-        <div className="absolute inset-0">
-          <div className="absolute left-[10%] top-[20%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
-
-          <div className="absolute left-[80%] top-[30%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
-
-          <div className="absolute left-[60%] top-[70%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
-
-          <div className="absolute left-[25%] top-[80%] h-2 w-2 rounded-full bg-[#CDFF45] shadow-[0_0_20px_#CDFF45]" />
-        </div>
 
         {/* ================= CONTENT ================= */}
 
