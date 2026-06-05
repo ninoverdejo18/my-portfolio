@@ -272,8 +272,8 @@ export default function OdetteRobot() {
     />
 
     <Robot
-      position={[-2.3, 1.4, 0]}
-      scale={1.2}
+      position={[100, 5, 100]}
+      scale={10}
     />
 
   </Suspense>
