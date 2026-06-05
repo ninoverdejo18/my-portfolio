@@ -16,7 +16,8 @@ function Hero() {
 
         <div className="absolute right-0 top-0 h-full w-[300px] bg-gradient-to-l from-[#A3E635]/10 to-transparent blur-3xl" />
         {/* ROBOT SECTION (FIXED) */}
-<div className="relative z-20 mx-auto max-w-7xl flex justify-center items-center h-[500px]">
+
+<div className="relative z-20 mx-auto max-w-7xl flex justify-center items-center h-[500px] elative flex min-h-screen">
   <div className="w-full h-full">
     <OdetteRobot />
   </div>
