@@ -1,6 +1,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, RoundedBox } from "@react-three/drei";
 import { useRef, useEffect, Suspense } from "react";
+import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
 function Robot() {
@@ -251,7 +252,7 @@ function Robot() {
 
 export default function OdetteRobot() {
   return (
-<div className="absolute left-[50%] top-[20%] w-[500px] h-[500px]">  
+<div className="absolute left-[-70%] top-[20%] w-[200px] h-[200px]">  
       <div className="w-full max-w-[650px] h-[520px]">
 
 <Canvas camera={{ position: [0, 0, 6.5] }}>
@@ -271,11 +272,11 @@ export default function OdetteRobot() {
       color="#ff0000"
     />
 
-<Robot
-  position={[-3.5, -0.3, 0]}
-  scale={1.1}
-/>
-
+    <Robot
+      position={[-3.2, 0.2, 0]}
+      scale={1.15}
+    />
+  <OrbitControls />
   </Suspense>
 </Canvas>
 
