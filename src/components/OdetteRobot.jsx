@@ -252,32 +252,37 @@ function Robot() {
 export default function OdetteRobot() {
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-full max-w-[650px] h-[520px]">
+      <div className="w-full max-w-[700px] h-[650px]">
+        <Canvas
+          camera={{
+            position: [0, 0, 5.8],
+            fov: 45,
+          }}
+        >
+          <Suspense fallback={null}>
+            <ambientLight intensity={1.5} />
 
-<Canvas camera={{ position: [0, 0, 6.5] }}>
-  <Suspense fallback={null}>
+            <directionalLight
+              position={[5, 5, 5]}
+              intensity={2}
+              color="#ffffff"
+            />
 
-    <ambientLight intensity={1.2} />
+            <pointLight
+              position={[0, 2, 3]}
+              intensity={1}
+              color="#ff0000"
+            />
 
-    <directionalLight
-      position={[5, 5, 5]}
-      intensity={1.5}
-      color="#ffffff"
-    />
+            <pointLight
+              position={[0, 4, 2]}
+              intensity={0.8}
+              color="#ffffff"
+            />
 
-    <pointLight
-      position={[0, 2, 3]}
-      intensity={0.6}
-      color="#ff0000"
-    />
-
-    <Robot
-      position={[100, 5, 100]}
-      scale={10}
-    />
-
-  </Suspense>
-</Canvas>
+            <Robot />
+          </Suspense>
+        </Canvas>
 
       </div>
     </div>
