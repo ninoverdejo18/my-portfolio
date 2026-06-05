@@ -251,7 +251,7 @@ function Robot() {
 
 export default function OdetteRobot() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+<div className="absolute left-[50%] top-[20%] w-[500px] h-[500px]">  
       <div className="w-full max-w-[650px] h-[520px]">
 
 <Canvas camera={{ position: [0, 0, 6.5] }}>
@@ -271,10 +271,10 @@ export default function OdetteRobot() {
       color="#ff0000"
     />
 
-    <Robot
-      position={[-2.3, 1.4, 0]}
-      scale={1.2}
-    />
+<Robot
+  position={[-3.5, -0.3, 0]}
+  scale={1.1}
+/>
 
   </Suspense>
 </Canvas>
